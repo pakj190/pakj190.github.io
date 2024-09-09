@@ -1,15 +1,14 @@
 body {
     background: mistyrose;
-    margin: 0; 
-    overflow: hidden; 
-    position: relative; 
+    text-align: center;
 }
 
 h1 {
     font-family: 'Marker Felt', fantasy; 
-    font-size: 4em; 
+    font-size: 6em; 
     text-align: center;
-    margin: 20px 0; 
+    margin-bottom: 90px; 
+    margin-top: 90px;
 }
 
 p {
@@ -18,26 +17,13 @@ p {
     font-size: 2em; 
 }
 
+
 .bordered {
-    border: 3px dotted rgb(165, 108, 124); 
+    border: 3px dotted rgb(184, 65, 85); 
     padding: 10px; 
-    display: block; 
-    width: fit-content; 
+    display: inline-block; 
+    margin-top: 20px; 
     font-size: 1.5em; 
-    text-align: center; 
-    margin: 20px auto; 
-}
-
-.moving-text span {
-    display: inline-block; /* Make sure each span is treated as an inline block */
-    padding-right: 2em; /* Space between the repeated texts */
-}
-
-@keyframes moveLeftRight {
-    0% {
-        transform: translateX(100%); /* Start off-screen to the right */
-    }
-    100% {
-        transform: translateX(-100%); /* Move to off-screen to the left */
-    }
+    font-family: 'Blippo', fantasy;
+    font-weight: 800;
 }
