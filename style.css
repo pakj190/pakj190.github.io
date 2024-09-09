@@ -1,3 +1,15 @@
 body {
-background: mistyrose;
+    background: mistyrose;
+}
+
+h1 {
+    font-family: 'Marker Felt', fantasy; /* Use Marker Felt for the heading */
+    font-size: 4em; /* Adjust the font size as needed */
+    text-align: center;
+}
+
+p {
+    text-align: center; /* Center the paragraph text */
+    font-family: 'Courier New', monospace; /* Change font to Courier New */
+    font-size: 2em; /* Increase the font size for better readability */
 }
