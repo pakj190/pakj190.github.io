@@ -1,15 +1,43 @@
 body {
     background: mistyrose;
+    margin: 0; 
+    overflow: hidden; 
+    position: relative; 
 }
 
 h1 {
-    font-family: 'Marker Felt', fantasy; /* Use Marker Felt for the heading */
-    font-size: 4em; /* Adjust the font size as needed */
+    font-family: 'Marker Felt', fantasy; 
+    font-size: 4em; 
     text-align: center;
+    margin: 20px 0; 
 }
 
 p {
-    text-align: center; /* Center the paragraph text */
-    font-family: 'Courier New', monospace; /* Change font to Courier New */
-    font-size: 2em; /* Increase the font size for better readability */
+    text-align: center; 
+    font-family: 'Courier New', monospace; 
+    font-size: 2em; 
+}
+
+.bordered {
+    border: 3px dotted rgb(165, 108, 124); 
+    padding: 10px; 
+    display: block; 
+    width: fit-content; 
+    font-size: 1.5em; 
+    text-align: center; 
+    margin: 20px auto; 
+}
+
+.moving-text span {
+    display: inline-block; /* Make sure each span is treated as an inline block */
+    padding-right: 2em; /* Space between the repeated texts */
+}
+
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to off-screen to the left */
+    }
 }
