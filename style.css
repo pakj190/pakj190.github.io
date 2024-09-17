@@ -1,16 +1,18 @@
 body {
-    background-color: #F5F5DC; 
-    color: #8E7F6D; 
-    font-family: Arial, sans-serif; 
-    text-align: center; 
+    background-color: #F5F5DC; /* Light Beige */
+    color: #8E7F6D; /* Dark Beige for text */
+    font-family: Arial, sans-serif; /* Simple, clean font */
+    text-align: center; /* Center align text */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
 h1 {
-    color: #8E7F6D; 
-    margin-top: 20px; 
+    color: #8E7F6D; /* Dark Beige for the heading */
+    margin-top: 20px; /* Add space above heading */
 }
 
 p {
-    color: #D2BBA4; 
-    margin: 20px; 
+    color: #D2BBA4; /* Warm Sand for the paragraph text */
+    margin: 20px; /* Add some space around the paragraph */
 }
