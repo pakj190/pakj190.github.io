@@ -1,23 +1,16 @@
 body {
-    background: mistyrose;
+    background-color: #F5F5DC; 
+    color: #8E7F6D; 
+    font-family: Arial, sans-serif; 
+    text-align: center; 
 }
 
 h1 {
-    font-family: 'Marker Felt', fantasy; 
-    font-size: 4em; 
-    text-align: center;
+    color: #8E7F6D; 
+    margin-top: 20px; 
 }
 
 p {
-    text-align: center; 
-    font-family: 'Courier New', monospace; 
-    font-size: 2em; 
-}
-
-.bordered {
-    border: 3px dotted rgb(172, 90, 104); 
-    padding: 10px; 
-    display: inline-block; /
-    margin-top: 20px; 
-    font-size: 1.5em; 
+    color: #D2BBA4; 
+    margin: 20px; 
 }
