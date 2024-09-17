@@ -1,18 +1,19 @@
 body {
-    background-color: #F5F5DC; /* Light Beige */
-    color: #8E7F6D; /* Dark Beige for text */
-    font-family: Arial, sans-serif; /* Simple, clean font */
-    text-align: center; /* Center align text */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    background-color: #eed9bb;
+    color: #8E7F6D; 
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center; 
+    margin: 0; 
+    padding: 0; 
 }
 
 h1 {
-    color: #8E7F6D; /* Dark Beige for the heading */
-    margin-top: 20px; /* Add space above heading */
+    color: #432b0c; 
+    margin-top: 50px; 
+    font-size: 4em;
 }
 
 p {
-    color: #D2BBA4; /* Warm Sand for the paragraph text */
-    margin: 20px; /* Add some space around the paragraph */
+    color: #9e846a; 
+    margin: 25px; 
 }
