@@ -9,7 +9,7 @@ body {
 
 h1 {
     color: #432b0c; 
-    margin-top: 50px; 
+    margin-top: 200px; 
     font-size: 4em;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -17,4 +17,9 @@ h1 {
 p {
     color: #9e846a; 
     margin: 25px; 
+}
+
+h3{
+    margin-top: 300px;
+    font-size: 3em;
 }
