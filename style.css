@@ -1,6 +1,6 @@
 body {
-    background-color: #eed9bb;
-    color: #8E7F6D; 
+    background-color: #ffffff;
+    color: #7b5b3a; 
     font-family: 'Times New Roman', Times, serif;
     text-align: center; 
     margin: 0; 
@@ -36,9 +36,9 @@ h2 {
 }
 
 h2:hover {
-    background-color: #5a3f28;
+    background-color: rgb(76, 51, 29); 
 }
 
 a {
-    color: rgb(255, 255, 255);
+    color: #ffffff;
 }
