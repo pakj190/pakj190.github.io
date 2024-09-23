@@ -23,3 +23,22 @@ h3{
     margin-top: 300px;
     font-size: 3em;
 }
+
+h2 {
+    background-color: #7b5b3a; 
+    color: #ffffff; 
+    padding: 15px 30px; 
+    border: none; 
+    border-radius: 5px; 
+    display: inline-block; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+}
+
+h2:hover {
+    background-color: #5a3f28;
+}
+
+a {
+    color: rgb(255, 255, 255);
+}
