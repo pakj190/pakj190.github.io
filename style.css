@@ -20,6 +20,7 @@ h1 {
     font-family: 'Joanna', sans-serif;
     text-align: left;
     margin-left: 100px;
+    align-items: center;
 }
 
 p {
@@ -50,11 +51,4 @@ h2:hover {
 
 a {
     color: #2A1904; 
-}
-
-h1, h2 {
-    display: inline-block; 
-    vertical-align: bottom; 
-    margin: 0; 
-    margin-top: 75px; 
 }
