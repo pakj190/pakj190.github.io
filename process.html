@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Process Page</title>
     <style>
+        @font-face {
+            font-family: 'Joanna';
+            src: url('Joanna-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
             background-color: #ffffff;
-            text-align: center; 
-            margin: 0; 
-            padding: 0; 
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center; /* Aligns all text content in the center */
         }
 
         h1 {
-            margin-top: 100px; 
-            margin-bottom: 20px;
-            font-size: 4em;
-            color: #2A1904;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            }
-
-        h2 {
-            color:#7b5b3a;
-            margin-top: 50px;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        }
-        h3 {
-            font-family: 'roboto', sans-serif;
+            font-size: 6em;
+            font-family: 'Joanna', sans-serif;
+            margin: 20px 0;
+            color: #7B5B3A;
         }
 
         .back-button {
             display: inline-block;
-            margin-top: 50px;
+            margin: 20px 0;
             padding: 10px 20px;
-            background-color: #C2A384; 
-            color: #ffffff; 
+            background-color: #C2A384;
+            color: #ffffff;
             border: none;
             border-radius: 5px;
             text-decoration: none;
             font-size: 1.2em;
+            cursor: pointer;
         }
         
         .back-button:hover {
-            background-color: rgb(76, 51, 29); 
+            background-color: rgb(76, 51, 29);
+        }
+
+        h2 {
+            color: #7B5B3A;
+            margin-top: 50px;
+        }
+
+        h3 {
+            font-size: 3em;
+            margin: 20px 0;
+            color: #7B5B3A;
+        }
+
+        p {
+            margin: 15px 0;
+            color: #7B5B3A;
         }
 
         iframe {
@@ -55,26 +73,46 @@
             height: auto; 
             margin-top: 20px;
         }
+
+        .image-wrapper {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin-top: 20px;
+        }
+        
+        .image-wrapper img {
+            max-width: 40%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
     <h1>PROCESS PAGE</h1>
     <a href="index.html" class="back-button">Back to My Portfolio</a>
+
     <h2>3 Themes</h2>
     <p>Here is a link to my <a href="https://docs.google.com/presentation/d/1hDRclr0NKhZ2dktQ45tqoMvEghQcvdDeK9J2brO4_ug/edit?usp=sharing" target="_blank">3 Themes slides</a></p>
+
     <h2>Mindmap</h2>
     <img src="mindmap.jpg" alt="Description of the image">
+
     <h2>One Pager</h2>
     <p>Check out my <a href="One Pager.pdf" target="_blank">1 Pager</a></p>
+
     <h2>Graphic Treatment</h2>
     <p>This is my target color palette</p>
-    <img src="2.png" >
-    <p>use the colors to create calming effect and use relaxing colors</p>
-    <p>minimal color palette with a red contrasting accent</p>
-    <p>typography : Roboto</p>
-    <h3>sample typography : roboto font</h3>
-    <h1>HEADER : IMPACT</h1>
-    <img src="png3.png" alt="Description of Image">
-    <img src="1.png" >
+    <img src="2.png" alt="Color Palette">
+    <p>Use the colors to create a calming effect with relaxing tones.</p>
+    <p>Minimal color palette with a red contrasting accent.</p>
+    <p>Typography: Roboto</p>
+
+    <h3>Sample Typography: Roboto Font</h3>
+    <h1>HEADER: My Own Handwriting</h1>
+
+    <div class="image-wrapper">
+        <img src="png3.png" alt="Description of Image">
+        <img src="1.png" alt="Description of Image">
+    </div>
 </body>
 </html>

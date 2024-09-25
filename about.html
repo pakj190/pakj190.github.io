@@ -1,38 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
 <head>
-    <title>ABOUT</title>
     <style>
+        @font-face {
+            font-family: 'Joanna';
+            src: url('Joanna-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center; /* Aligns all text content in the center */
+        }
+
+        h1 {
+            font-size: 6em;
+            font-family: 'Joanna', sans-serif;
+            margin: 20px;
+            color: #7B5B3A;
+        }
 
         .back-button {
             display: inline-block;
-            margin-top: 30px;
+            margin: 20px 0;
             padding: 10px 20px;
-            background-color: #C2A384; 
-            color: #ffffff; 
+            background-color: #C2A384;
+            color: #ffffff;
             border: none;
             border-radius: 5px;
             text-decoration: none;
             font-size: 1.2em;
+            cursor: pointer;
         }
         
         .back-button:hover {
-            background-color: rgb(76, 51, 29); 
+            background-color: rgb(76, 51, 29);
         }
-  
+
+        h3 {
+            font-size: 3em;
+            margin: 20px 0;
+        }
+
+        p {
+            margin: 15px 0;
+            color: #7B5B3A;
+        }
     </style>
 </head>
 <body>
     <h1>ABOUT</h1>
     <a href="index.html" class="back-button">Back to My Portfolio</a>
-    <h3>MY portFOLIO : My Digital Interactive Art Gallery</h3>
+    <h3>My Portfolio: My Digital Interactive Art Gallery</h3>
     <p>Welcome to my hobby gallery where anyone can learn the hobbies I enjoy through this interactive experience.</p>
-    <p>I specifically used these colors and fonts to give a warm and relaxed vibe that isn't too stimulating because I want the main focus to be on the art and the progress. The font choice is because I want to have an elegant modern vibe that is reader-friendly.</p>
-    <p>taking inspiration from the https://dam.org homepage to create my homepage</p>
-
+    <p>I specifically used these colors and fonts to give a warm, relaxed vibe that isn't too stimulating, as I want the main focus to be on the art and the progress. The font choice adds an elegant modern vibe that is reader-friendly.</p>
+    <p>Taking inspiration from the <a href="https://dam.org">DAM</a> homepage to create my homepage.</p>
 </body>
-
 </html>

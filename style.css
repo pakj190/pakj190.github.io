@@ -1,10 +1,10 @@
 body {
     background-color: #ffffff;
-    color: #7b5b3a; 
+    color: #7b5b3a;
     font-family: 'Times New Roman', Times, serif;
-    text-align: center; 
-    margin: 0; 
-    padding: 0; 
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 @font-face {
@@ -15,17 +15,26 @@ body {
 }
 
 h1 {
-    color: #462b0b; 
+    color: #462b0b;
     font-size: 6em;
     font-family: 'Joanna', sans-serif;
-    text-align: left;
-    margin-left: 100px;
-    align-items: center;
+    margin: 25px 0; /* Margin at top and bottom */
 }
 
-p {
-    color: #9e846a; 
-    margin: 25px; 
+h2 {
+    background-color: #ffffff;
+    color: #2A1904;
+    padding: 15px 30px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    margin: 20px 20px 0 0; /* Adds consistent space between elements */
+}
+
+h2:hover {
+    background-color: #9e846a;
 }
 
 h3 {
@@ -33,22 +42,12 @@ h3 {
     font-size: 3em;
 }
 
-h2 {
-    background-color: #ffffff; 
-    color: #2A1904;
-    padding: 15px 30px; 
-    border-radius: 5px; 
-    display: inline-block; 
-    cursor: pointer; 
-    transition: background-color 0.3s;
-    margin-left: 20px; 
-    font-size: 14px;
-}
-
-h2:hover {
-    background-color: #9e846a; 
+p {
+    color: #9e846a;
+    margin: 25px 0; /* Consistent margin for paragraphs */
 }
 
 a {
-    color: #2A1904; 
+    color: #2A1904;
+    text-decoration: none; /* Removes underline from links */
 }
