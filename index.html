@@ -1,17 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
+    <style>
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 10px; /* Spacing between images */
+            justify-items: center; /* Center images in each cell */
+            margin-top: 50px;
+        }
+
+        .image-grid a {
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        .image-grid img {
+            width: 100%; /* Make images responsive */
+            max-width: 300px; /* Limit the size */
+            transition: transform 0.3s ease; /* Smooth zoom on hover */
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.05); /* Slightly enlarge image on hover */
+        }
+    </style>
 </head>
 <body>
+
     <h1>M Y F O L I O</h1>
     <h2><a href="about.html">about me</a></h2>
     <h2><a href="process.html">process page</a></h2>
     <h2><a href="https://www.depop.com/yeinpak/" target="_blank">shop</a></h2>
-
-    
     <h2><a href="crochet.html">crochet</a></h2>
     <h2><a href="entry1.html">entry 1</a></h2>
+
+    <div class="image-grid">
+        <a href="about.html">
+            <img src="crochet.flower.jpg" alt="Entry 2">
+        </a>
+        <a href="process.html">
+            <img src="crochet.flower.jpg" alt="Entry 2">
+        </a>
+        <a href="https://www.depop.com/yeinpak/" target="_blank">
+            <img src="crochet.flower.jpg" alt="Entry 2">
+        </a>
+        <a href="crochet.html">
+            <img src="crochet.flower.jpg" alt="Entry 2">
+        </a>
+        <a href="entry1.html">
+            <img src="crochet.flower.jpg" alt="Entry 2">
+        </a>
+        <a href="entry2.html">
+            <img src="crochet.flower.jpg" alt="Entry 2">
+        </a>
+    </div>
 
 </body>
 </html>
