@@ -24,7 +24,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center; 
+            text-align: center;
         }
 
         h1 {
@@ -37,6 +37,7 @@
         h2 {
             font-size: 20px;
             font-family: "Comfortaa", sans-serif;
+            margin-bottom: 20px;
         }
 
         .back-button {
@@ -56,74 +57,50 @@
             background-color: rgb(76, 51, 29);
         }
 
-        h3 {
-            font-size: 3em;
-            margin: 20px 0;
-        }
-
         p {
             margin: 15px 0;
             color: #7B5B3A;
         }
+
         img {
             max-width: 50%; 
             height: auto; 
             margin-top: 10px;
         }
-        @keyframes jiggle {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(3deg); }
-            50% { transform: rotate(-3deg); }
-            75% { transform: rotate(3deg); }
-        }
 
-        .jiggle {
-            max-width: 40%; 
-            height: auto; 
+        iframe {
             margin-top: 20px;
-            animation: jiggle 1s infinite ease-in-out;
         }
-
     </style>
 </head>
 <body>
-    <h1>crochet star keychain</h1>
-    <a href="../index.html" class="back-button">Back to My Portfolio</a>
+
+   <h1>tutorial</h1>
+    <!-- Back button linking to materials.html -->
+    <a href="materials.html" class="back-button">Back to Materials</a>
+
     <div>
-        <h2>i will teach you how to make a keychain out of any crochet amigurumi pieces that you may have</h2>
-        <!-- Make the PNG clickable -->
-        <a href="materials.html" target="_blank">
-            <img src="yellow.star.png" alt="Entry 5" class="jiggle">
-        </a>
-        <h2>materials (crochet part):</h2>
-        <p> - any yarn 4mm or thicker but i will be using 4mm worsted yellow yarn</p>
-        <p> - 5mm crochet hook (the bigger your hook, the more loose your top will be)</p>
-        <p> - scissors</p>
-        <p> - stitching needle</p>
-        <p> - stuffing</p>
-        <p> - stitch marker (you can use whatever you want for a stitch marker, it will only be used once)</p>
-    </div>
-    <div>
-        <h2>watch this tutorial if you want to make a mini star plush</h2>
-        <p>i changed the design a bit to make it the way i want it to look but if you are a beginner, just follow the video before attempting to change anything</p>
+        <h2>Watch this tutorial if you want to make a mini star plush:</h2>
+        <p>I changed the design a bit to make it the way I want it to look but if you are a beginner, just follow the video before attempting to change anything.</p>
     
         <iframe width="560" height="315" src="https://www.youtube.com/embed/SklDKHBK7yU?si=vEDOIAn6m4Aotu1U" 
         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
         gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
         </iframe>
     </div>
-    
+
     <div>
-        <h2>turning your crochet piece into a keychain:</h2>
-        <p>you will need a keychain and some chains that you want to use</p>
+        <h2>Turning your crochet piece into a keychain:</h2>
+        <p>You will need a keychain and some chains that you want to use.</p>
+        <img src="progress/1.png" alt="Amigurumi and supplies">
+        <p>Get your amigurumi and supplies.</p>
+        <img src="progress/2.png" alt="Supplies: keychains, chains, pliers">
+        <p>My supplies are keychains, chains, and pliers.</p>
+        <img src="progress/3.png" alt="Finished keychain">
     </div>
-    
-    <div>
-        <img src="progress/1.png" alt="Entry 5">
-        <p>get your amigurumi and supplies</p>
-        <img src="progress/2.png" alt="Entry 5">
-        <p>my supplies are keychains, chains and pliers</p>
-        <img src="progress/3.png" alt="bag">
-    </div>
+
+    <!-- Back button linking to crochet-star-keychain.html -->
+    <a href="crochet-star-keychain.html" class="back-button">Back to Crochet Star Keychain</a>
+
 </body>
 </html>
