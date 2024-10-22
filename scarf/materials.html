@@ -48,38 +48,28 @@
         .button-container {
             display: flex;
             justify-content: center;
-            margin-top: 60px; /* Increase space above the button container to push buttons lower */
+            margin-top: 20px; /* Space above the button container */
         }
 
         .button-container a {
-            margin: 0 10px; /* Space between buttons */
+            margin: 0 20px; /* Space between buttons */
+            display: block; /* Ensure it covers the whole image */
         }
 
         .button-container img {
-            width: 90px; /* Adjusted size for buttons */
+            width: 100px; /* Adjusted size for buttons */
             height: auto; /* Maintain aspect ratio */
         }
-
+        
         .image-container {
             position: relative; /* Establish a relative positioning context */
-            width: 50%; /* Make the images smaller by reducing the container width */
-            margin-bottom: 40px; /* Space below the images */
+            width: 60%; /* Make the image smaller by reducing the container width */
+            margin-bottom: 40px; /* Space below the image */
         }
 
-        .image-background {
-            position: absolute; /* Positioned absolutely relative to the container */
-            top: 0;
-            left: 0;
-            width: 100%; /* Matches container size */
-            height: auto;
-        }
-
-        .image-overlay {
-            position: absolute; /* Positioned absolutely on top of the background */
-            top: 0;
-            left: 0;
-            width: 100%; /* Matches container size */
-            height: auto;
+        .image-container img {
+            width: 100%; /* Make sure the image covers the container */
+            height: auto; /* Maintain aspect ratio */
         }
 
     </style>
@@ -88,17 +78,15 @@
     <h1>Materials to make a granny square scarf</h1>
 
     <div class="image-container">
-        <img src="materials/blank.materials.png" alt="Blank Materials" class="image-background">
-        <img src="materials/materials.words.png" alt="Materials Word" class="image-overlay">
+        <img src="materials/materials.png" alt="Materials Image">
     </div>
 
-    <!-- Buttons moved lower on the screen with increased margin-top -->
     <div class="button-container">
-        <a href="scarf.html">
-            <img src="png%20drawings/back.png" alt="Back Button">
+        <a href="materials.html">
+            <img src="png drawings/back.png" alt="Back Button">
         </a>
-        <a href="instructions.html">
-            <img src="png%20drawings/front.png" alt="Forward Button">
+        <a href="stitch.html">
+            <img src="png drawings/front.png" alt="Front Button">
         </a>
     </div>
     
