@@ -59,8 +59,13 @@
         .button-container img {
             width: 100px; /* Adjusted size for buttons */
             height: auto; /* Maintain aspect ratio */
+            transition: filter 0.3s; /* Smooth transition for filter effect */
         }
-        
+
+        .button-container img:hover {
+            filter: brightness(70%); /* Darken the image on hover */
+        }
+
         .image-container {
             position: relative; /* Establish a relative positioning context */
             width: 60%; /* Make the image smaller by reducing the container width */
