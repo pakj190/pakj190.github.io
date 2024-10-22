@@ -60,11 +60,29 @@
             height: auto; /* Maintain aspect ratio */
         }
 
-        /* Adding style for the materials image */
-        .materials-image {
-            max-width: 70%; /* Adjust size as needed */
+        /* Container to hold both overlapping images */
+        .image-container {
+            position: relative; /* Establish a relative positioning context */
+            width: 70%; /* Control size of the container */
+            margin-bottom: 20px; /* Space below the images */
+        }
+
+        /* First image (background image) */
+        .image-background {
+            position: absolute; /* Positioned absolutely relative to the container */
+            top: 0;
+            left: 0;
+            width: 100%; /* Matches container size */
             height: auto;
-            margin-bottom: 20px; /* Space below the image */
+        }
+
+        /* Second image (on top of the background) */
+        .image-overlay {
+            position: absolute; /* Positioned absolutely on top of the background */
+            top: 0;
+            left: 0;
+            width: 100%; /* Matches container size */
+            height: auto;
         }
 
     </style>
@@ -72,8 +90,13 @@
 <body>
     <h1>Materials to make a granny square scarf</h1>
 
-    <!-- Added materials image -->
-    <img src="materials/materials.png" alt="Materials Image" class="materials-image">
+    <!-- Container for the overlapping images -->
+    <div class="image-container">
+        <!-- First image (background) -->
+        <img src="materials/blank.materials.png" alt="Blank Materials" class="image-background">
+        <!-- Second image (overlay) -->
+        <img src="materials/materials.words.png" alt="Materials Word" class="image-overlay">
+    </div>
 
     <div>
         <h2>Materials (crochet part):</h2>
