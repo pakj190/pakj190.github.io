@@ -48,7 +48,7 @@
         .button-container {
             display: flex;
             justify-content: center;
-            margin-top: 20px; /* Space above the button container */
+            margin-top: 60px; /* Increase space above the button container to push buttons lower */
         }
 
         .button-container a {
@@ -60,14 +60,12 @@
             height: auto; /* Maintain aspect ratio */
         }
 
-        /* Container to hold both overlapping images */
         .image-container {
             position: relative; /* Establish a relative positioning context */
-            width: 70%; /* Control size of the container */
-            margin-bottom: 20px; /* Space below the images */
+            width: 50%; /* Make the images smaller by reducing the container width */
+            margin-bottom: 40px; /* Space below the images */
         }
 
-        /* First image (background image) */
         .image-background {
             position: absolute; /* Positioned absolutely relative to the container */
             top: 0;
@@ -76,7 +74,6 @@
             height: auto;
         }
 
-        /* Second image (on top of the background) */
         .image-overlay {
             position: absolute; /* Positioned absolutely on top of the background */
             top: 0;
@@ -90,28 +87,18 @@
 <body>
     <h1>Materials to make a granny square scarf</h1>
 
-    <!-- Container for the overlapping images -->
     <div class="image-container">
-        <!-- First image (background) -->
         <img src="materials/blank.materials.png" alt="Blank Materials" class="image-background">
-        <!-- Second image (overlay) -->
         <img src="materials/materials.words.png" alt="Materials Word" class="image-overlay">
     </div>
 
-    <div>
-        <h2>Materials (crochet part):</h2>
-        <p> - Any yarn 4mm or thicker but I will be using a 3mm soft yarn</p>
-        <p> - 5mm crochet hook (the bigger your hook, the more loose your top will be)</p>
-        <p> - Scissors</p>
-        <p> - Stitching needle</p>
-    </div>
-
+    <!-- Buttons moved lower on the screen with increased margin-top -->
     <div class="button-container">
         <a href="scarf.html">
-            <img src="png drawings/back.png" alt="Back Button">
+            <img src="png%20drawings/back.png" alt="Back Button">
         </a>
         <a href="instructions.html">
-            <img src="png drawings/front.png" alt="Forward Button">
+            <img src="png%20drawings/front.png" alt="Forward Button">
         </a>
     </div>
     
