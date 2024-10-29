@@ -77,6 +77,7 @@
         .button-container a {
             margin: 0 10px; 
             display: block; 
+            transition: filter 0.3s ease; /* Smooth transition for hover effect */
         }
 
         .button-container img {
@@ -84,8 +85,9 @@
             height: auto; 
         }
 
-        .button-container img:hover {
-            filter: brightness(70%); 
+        /* Darken the button on hover */
+        .button-container a:hover img {
+            filter: brightness(70%);
         }
     </style>
 </head>
@@ -106,18 +108,15 @@
     </div>
 
     <div class="beanie-container beanie-left">
-        <img src="beanietypes/disney.png" alt="disney beanie">
-        <p>maybe you know a disney adult and have to get them a birthday gift.
-            Try making them a disney bunny ear beanie instead of a cat one.
-            Click on the beanie to watch the tutorial for a long ear bunny beanie ->
-        </p>
+        <a href="disney.tutorial.html">
+            <img src="beanietypes/disney.png" alt="disney beanie">
+        </a>
+        <p>Maybe you know a Disney fan and need a birthday gift. Try making them a Disney bunny ear beanie instead of a cat one. Click on the beanie to watch the tutorial for a long ear bunny beanie!</p>
     </div>
 
     <div class="beanie-container beanie-right">
         <img src="beanietypes/brownx.png" alt="stitch beanie">
-        <p>you can add any designs you want by sewing one on just like these X embroidery designs. you don't need any embroidery knowledge cus I don't have anything
-            all you need is a yarn needle and some yarn. then you just make random sewing stitches to get your design.
-        </p>
+        <p>You can add any designs you want by sewing them on, just like these X embroidery designs. You don’t need embroidery knowledge, just a yarn needle and some yarn!</p>
     </div>
 
     <div class="button-container">
