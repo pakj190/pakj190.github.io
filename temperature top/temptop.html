@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Joanna';
+            src: url('../Joanna-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-image: url('linedpaper.jpeg'); 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            background-position: top center;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center; 
+        }
+
+        h1 {
+            font-size: 6em;
+            font-family: 'Joanna', sans-serif;
+            margin: 20px;
+            color: #7B5B3A;
+            position: relative;
+            z-index: 1;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-family: "Comfortaa", sans-serif;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #C2A384;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: rgb(76, 51, 29);
+        }
+
+        .small-icon {
+            width: 80px; /* Specify a smaller size */
+            height: auto; /* Maintain aspect ratio */
+            position: absolute; /* Keep original positioning */
+            animation: rotate-sparkle 2s infinite steps(2);
+            z-index: 0;
+        }
+
+        @keyframes rotate-sparkle {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(-45deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(45deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .image-container {
+            display: flex; /* Align images horizontally */
+            justify-content: center; /* Center the images */
+            align-items: center; /* Align images vertically */
+            margin-top: 20px; /* Optional margin */
+        }
+
+        .small-image {
+            width: 100px; /* Set a consistent width for these images */
+            height: auto; /* Maintain aspect ratio */
+            margin: 0 10px; /* Space between images */
+        }
+
+        .jiggle {
+            max-width: 40%; 
+            height: auto; 
+            margin-top: 20px;
+            animation: slow-jiggle 1s infinite ease-in-out;
+        }
+
+        @keyframes slow-jiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(3deg); }
+            50% { transform: rotate(-3deg); }
+            75% { transform: rotate(3deg); }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>temperature top</h1>
+
+    <a href="../index.html" class="back-button">Back to My Portfolio</a>
+
+    <img src="pics/orange.heart.png" class="small-icon icon-small" alt="Small Star" style="top: 100px; left: 5%;">
+    <img src="pics/star.png" class="small-icon icon-medium" alt="Medium Star" style="top: 90px; right: 30%;">
+    <img src="pics/swirl.png" class="small-icon icon-large" alt="Large Star" style="top: 240px; left: 30%;">
+    <img src="pics/orange.heart.png" class="small-icon icon-extra-small" alt="Extra Small Star" style="top: 280px; right: 10%;">
+
+    <div>
+        <h2>this is a top that I made during my studio class</h2>
+
+        <div class="image-container">
+            <a href="journey.html" target="_blank">
+                <img src="pics/temptop.shadow.png" alt="Entry 5" class="jiggle" style="width: 400px; height: auto;">
+            </a>
+            <img src="pics/click.png" alt="Click" style="width: 100px; height: auto;">
+        </div>        
+    </div>
+</body>
+</html>
