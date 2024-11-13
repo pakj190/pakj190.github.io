@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,56 +6,120 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #f69083;
+    font-family: Arial, sans-serif;
 }
 
-.container {
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ae2312;
+}
+
+.header .logo {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+.header .header-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 20px;
+}
+
+.image-container {
     position: relative;
-    width: 80vw;
-    height: 80vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    margin-top: 50px;
 }
 
+/* Image Styles */
 .image {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    background-image: url('https://via.placeholder.com/100'); /* Example placeholder */
     background-size: cover;
     background-position: center;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, z-index 0.3s ease;
     cursor: pointer;
+    overflow: hidden;
 }
 
-.image::after {
-    content: attr(data-text);
+/* Individual Image Positioning */
+.image1 {
+    height: 400px;
+    width: 800px;
+    top: 100px;
+    left: -150px;
+    transform: rotate(-10deg);
+    background-image: url('Amelie/Movie.png');
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
-    font-size: 1em;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    width: 100%;
-    height: 100%;
-    background-color: #333;
-    border-radius: 10px;
+    color: white;
 }
 
+.image2 {
+    height: 400px;
+    width: 600px;
+    top: 100px;
+    right: -30px;
+    transform: rotate(2deg);
+    background-image: url('Amelie/Frame1.png');
+    display: flex;
+    padding: 20px;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+}
+
+.image3 {
+    height: 400px;
+    width: 600px;
+    bottom: 20px;
+    left: 10px;
+    transform: rotate(4deg);
+    background-image: url('Amelie/Photo3.png');
+}
+
+.image4 {
+    height: 300px;
+    width: 300px;
+    bottom: 0px;
+    right: 10px;
+    transform: rotate(5deg);
+    background-image: url('Amelie/Photo2.jpg');
+}
+
+.image5 {
+    height: 300px;
+    width: 300px;
+    top: 110px;
+    right: 40vw;
+    transform: rotate(-5deg);
+    background-image: url('Amelie/Photo1.jpg');
+}
+
+/* Hover Effects */
 .image:hover {
+    transform: scale(1.1) rotate(0deg); /* Enlarges and centers the image */
     z-index: 10;
-    transform: translate(-50%, -50%) scale(2) rotate(0deg);
-    left: 50%;
-    top: 50%;
 }
 
-.image:hover::after {
-    opacity: 1;
+/* Optional Text Styling */
+.image h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.image p {
+    font-size: 1rem;
+    margin: 0 20px;
+    text-align: center;
 }
