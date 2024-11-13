@@ -84,7 +84,7 @@ h2 {
 }
 
 .image-container img:hover {
-    transform: scale(1.05); /* Slight enlargement on hover */
+    transform: scale(2.05); /* Slight enlargement on hover */
 }
 
 /* Center-align paragraph */
