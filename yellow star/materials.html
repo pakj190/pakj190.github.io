@@ -13,29 +13,32 @@
         }
 
         body {
-            background-image: url('linedpaper.jpeg'); 
-            background-repeat: no-repeat; 
-            background-size: cover; 
+            background-image: url('linedpaper.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
             background-position: top center;
             font-family: 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             text-align: center;
+            position: relative;
+            height: 100vh;
+            width: 100%;
         }
 
         h1 {
-            font-size: 6em;
+            font-size: 6vw; /* Adjusts size based on screen width */
             font-family: 'Joanna', sans-serif;
             margin: 20px;
             color: #7B5B3A;
         }
 
         h2 {
-            font-size: 20px;
+            font-size: 3vw; /* Adjusts size based on screen width */
             font-family: "Comfortaa", sans-serif;
             margin-bottom: 20px;
         }
@@ -49,7 +52,7 @@
             border: none;
             border-radius: 5px;
             text-decoration: none;
-            font-size: 1.2em;
+            font-size: 1.5vw;
             cursor: pointer;
         }
 
@@ -64,34 +67,119 @@
 
         .image-container {
             position: relative;
-            width: 200px; /* Adjust width of the image */
-            margin-top: 20px;
-            transition: transform 0.3s ease; /* Smooth transition for scaling */
+            transition: transform 0.3s ease-in-out;
+            display: inline-block;
+            margin: 10px;
         }
 
         .image-container img {
-            width: 100%; /* Make the image fill the container */
-            transition: transform 0.3s ease;
+            max-width: 40vw; /* Images take 40% of the viewport width */
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #7B5B3A;
+            font-size: 2vw;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .image-container:hover span {
+            opacity: 1; /* Show the text when hovering */
         }
 
         .image-container:hover img {
-            transform: scale(1.5); /* Scale image on hover */
+            transform: scale(1.5); /* Make the image bigger on hover */
         }
 
-        .image-container:hover::after {
-            content: "4mm worsted yellow yarn"; /* Display text on hover */
-            position: absolute;
-            top: 100%; /* Position below the image */
-            left: 50%;
-            transform: translateX(-50%);
-            font-family: "Comfortaa", sans-serif;
-            font-size: 16px;
-            color: #7B5B3A;
-            margin-top: 10px;
+        .image-container img {
+            max-width: 40vw; /* Images should adjust to 40% of viewport width */
         }
 
-        iframe {
-            margin-top: 20px;
+        /* Layout positioning for smaller screen sizes (mobile-first approach) */
+        .image-container {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive Layout for Medium Screens (max-width: 768px) */
+        @media (max-width: 768px) {
+            body {
+                align-items: center;
+            }
+
+            .image-container {
+                max-width: 70%; /* Scale images to fit better */
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 8vw; /* Responsive font size for smaller screens */
+            }
+
+            h2 {
+                font-size: 4vw; /* Responsive font size for smaller screens */
+            }
+
+            .back-button {
+                font-size: 3vw; /* Adjust button size */
+            }
+        }
+
+        /* Layout for small screens (max-width: 600px) */
+        @media (max-width: 600px) {
+            body {
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 10vw; /* Bigger font size for really small screens */
+            }
+
+            h2 {
+                font-size: 5vw; /* Adjust text size for small screens */
+            }
+
+            .back-button {
+                font-size: 4vw; /* Larger button text */
+                padding: 15px 25px; /* Make button a little bigger */
+            }
+
+            .image-container img {
+                max-width: 80vw; /* Scale images for mobile */
+            }
+
+            .image-container {
+                display: block; /* Stack images vertically */
+                margin-bottom: 20px;
+                width: 80%;
+            }
+        }
+
+        /* For very small screens (less than 400px wide) */
+        @media (max-width: 400px) {
+            .image-container img {
+                max-width: 90vw; /* Make images take 90% of screen width */
+            }
+
+            h1 {
+                font-size: 12vw; /* Font gets even smaller for tiny screens */
+            }
+
+            h2 {
+                font-size: 6vw;
+            }
+
+            .back-button {
+                font-size: 5vw; /* Adjust button size */
+                padding: 18px 30px;
+            }
         }
     </style>
 </head>
@@ -102,16 +190,21 @@
 
     <div>
         <h2>Materials (crochet part):</h2>
-        <p> - 5mm crochet hook (the bigger your hook, the more loose your top will be)</p>
-        <p> - Scissors</p>
-        <p> - Stitching needle</p>
-        <p> - Stuffing</p>
-        <p> - Stitch marker (you can use whatever you want for a stitch marker, it will only be used once)</p>
     </div>
 
     <div class="image-container">
-        <img src="drawings/yarn.png" alt="yarn material">
+        <img src="drawings/yarn.png" alt="Yarn material">
+        <span>4mm Worsted Yarn</span>
     </div>
 
+    <div class="image-container">
+        <img src="drawings/hook.png" alt="5mm Hook">
+        <span>5mm Hook</span>
+    </div>
+
+    <div class="image-container">
+        <img src="drawings/scissors.png" alt="Scissors">
+        <span>Scissors</span>
+    </div>
 </body>
 </html>

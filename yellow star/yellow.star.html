@@ -6,28 +6,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <style>
         @font-face {
-            font-family: 'Joanna';
-            src: url('../Joanna-Regular.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
+        font-family: 'Joanna';
+        src: url('../Joanna-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
         }
 
         body {
-            background-image: url('linedpaper.jpeg');
-            background-repeat: no-repeat;
-            background-size: cover;
+            background-image: url('linedpaper.jpeg'); 
+            background-repeat: no-repeat; 
+            background-size: cover; 
             background-position: top center;
             font-family: 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;  /* Changed from 'center' to 'flex-start' */
+            justify-content: center;
             align-items: center;
-            text-align: center;
-            position: relative;
-            height: 100vh; /* Full height to utilize entire screen */
+            text-align: center; 
         }
+
 
         h1 {
             font-size: 6em;
@@ -36,10 +35,9 @@
             color: #7B5B3A;
         }
 
-        h2 {
+        h2{
             font-size: 20px;
             font-family: "Comfortaa", sans-serif;
-            margin-bottom: 20px;
         }
 
         .back-button {
@@ -54,78 +52,53 @@
             font-size: 1.2em;
             cursor: pointer;
         }
-
+        
         .back-button:hover {
             background-color: rgb(76, 51, 29);
+        }
+
+        h3 {
+            font-size: 3em;
+            margin: 20px 0;
         }
 
         p {
             margin: 15px 0;
             color: #7B5B3A;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
-
-        .image-container {
-            position: absolute;
-            transition: transform 0.3s ease-in-out;
+        img {
+            max-width: 40%; 
+            height: auto; 
+            margin-top: 20px;
         }
-
-        .image-container img {
-            max-width: 44%;
-            height: auto;
-            transition: transform 0.3s ease-in-out;
+        @keyframes jiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(3deg); }
+            50% { transform: rotate(-3deg); }
+            75% { transform: rotate(3deg); }
         }
-
-        .image-container span {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #7B5B3A;
-            font-size: 1.2em;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
+  
+        img {
+            animation: jiggle 1s infinite;
         }
-
-        .image-container:hover span {
-            opacity: 1; /* Show the text when hovering */
-        }
-
-        .image-container:hover img {
-            transform: scale(1.5); /* Make the image bigger on hover */
-        }
-
-        /* Position the single image */
-        .image1 {
-            top: 70%; 
-            left: 50%; /* Centered in the middle */
-            transform: translate(-50%, -50%);
-        }
-
-        .image2 {
-            top: 60%;
-            left: 80%;
-            transform: translate(-50%, -50%);
-        }
-
     </style>
 </head>
 <body>
-    <h1>Materials for Crochet Star Keychain</h1>
-
-    <a href="yellow.star.html" class="back-button">Back to Crochet Star Keychain</a>
-
+    <h1>amigurmi keychain</h1>
+    <a href="../index.html" class="back-button">back to my portfolio</a>
     <div>
-        <h2>Materials (crochet part):</h2>
+        <h2>We are making this mini mesh bag together</h2>
+    
+        <a href="materials.html">
+            <img src="yellow.star.png" alt="Entry 1" style="cursor: pointer;">
+        </a>
+    
+        <h2>Press the star to look at the materials</h2>
     </div>
+    
 
-    <div class="image-container image1">
-        <img src="drawings/yarn.png" alt="Yarn material">
-        <span>4mm Worsted Yarn</span>
-    </div>
-
-    <div class="image-container image2">
-        <img src="drawings/hook.png" alt="Yarn material">
-        <span>5mm hook</span>
-    </div>
+    
 </body>
 </html>
