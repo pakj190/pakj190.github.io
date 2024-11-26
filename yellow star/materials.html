@@ -12,6 +12,7 @@
             font-style: normal;
         }
 
+        /* Adding the background image overlay */
         body {
             background-image: url('linedpaper.jpeg');
             background-repeat: no-repeat;
@@ -26,19 +27,30 @@
             align-items: center;
             text-align: center;
             position: relative;
-            height: 100vh;
+            height: 100vh; /* Full height */
+            overflow-x: hidden; /* Prevent horizontal overflow */
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+            z-index: -1; /* Position behind the content */
         }
 
         h1 {
-            font-size: 6vw; /* Adjusts size based on screen width */
+            font-size: 6em;
             font-family: 'Joanna', sans-serif;
             margin: 20px;
             color: #7B5B3A;
         }
 
         h2 {
-            font-size: 3vw; /* Adjusts size based on screen width */
+            font-size: 20px;
             font-family: "Comfortaa", sans-serif;
             margin-bottom: 20px;
         }
@@ -52,7 +64,7 @@
             border: none;
             border-radius: 5px;
             text-decoration: none;
-            font-size: 1.5vw;
+            font-size: 1.2em;
             cursor: pointer;
         }
 
@@ -65,15 +77,15 @@
             color: #7B5B3A;
         }
 
+        /* Image Container */
         .image-container {
-            position: relative;
+            position: fixed; /* Make images fixed on the page */
             transition: transform 0.3s ease-in-out;
-            display: inline-block;
-            margin: 10px;
+            z-index: 1; /* Ensure it's above the background */
         }
 
         .image-container img {
-            max-width: 40vw; /* Images take 40% of the viewport width */
+            max-width: 44%;
             height: auto;
             transition: transform 0.3s ease-in-out;
         }
@@ -84,103 +96,104 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: #7B5B3A;
-            font-size: 2vw;
+            font-size: 1.2em;
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
         }
 
         .image-container:hover span {
-            opacity: 1; /* Show the text when hovering */
+            opacity: 1;
         }
 
         .image-container:hover img {
-            transform: scale(1.5); /* Make the image bigger on hover */
+            transform: scale(1.5); 
         }
 
-        .image-container img {
-            max-width: 40vw; /* Images should adjust to 40% of viewport width */
+        .image1 {
+            top: 60%; 
+            left: 40%;
+            transform: translate(-50%, -50%);
+            max-width: 500px;
         }
 
-        /* Layout positioning for smaller screen sizes (mobile-first approach) */
-        .image-container {
-            display: block;
-            margin-bottom: 15px;
+        .image2 {
+            top: 48%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            max-width: 650px;
         }
 
-        /* Responsive Layout for Medium Screens (max-width: 768px) */
+        .image3 {
+            top: 57%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            max-width: 500px;
+        }
+
+        .image4{
+            top: 70%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+            max-width: 660px;
+        }
+
+        /* Media Query for small screens */
         @media (max-width: 768px) {
-            body {
-                align-items: center;
+            .image1, .image2, .image3, .image4 {
+                position: fixed; /* Keep images fixed even on small screens */
+                max-width: 80%;
             }
-
-            .image-container {
-                max-width: 70%; /* Scale images to fit better */
-                margin: 20px;
-            }
-
             h1 {
-                font-size: 8vw; /* Responsive font size for smaller screens */
+                font-size: 4em;
             }
-
             h2 {
-                font-size: 4vw; /* Responsive font size for smaller screens */
-            }
-
-            .back-button {
-                font-size: 3vw; /* Adjust button size */
+                font-size: 18px;
             }
         }
 
-        /* Layout for small screens (max-width: 600px) */
-        @media (max-width: 600px) {
-            body {
-                flex-direction: column;
-                justify-content: center;
+        @media (max-width: 480px) {
+            .image1, .image2, .image3, .image4 {
+                position: fixed; 
+                max-width: 40%;
             }
-
             h1 {
-                font-size: 10vw; /* Bigger font size for really small screens */
+                font-size: 3em;
             }
-
             h2 {
-                font-size: 5vw; /* Adjust text size for small screens */
-            }
-
-            .back-button {
-                font-size: 4vw; /* Larger button text */
-                padding: 15px 25px; /* Make button a little bigger */
-            }
-
-            .image-container img {
-                max-width: 80vw; /* Scale images for mobile */
-            }
-
-            .image-container {
-                display: block; /* Stack images vertically */
-                margin-bottom: 20px;
-                width: 80%;
+                font-size: 16px;
             }
         }
 
-        /* For very small screens (less than 400px wide) */
-        @media (max-width: 400px) {
-            .image-container img {
-                max-width: 90vw; /* Make images take 90% of screen width */
-            }
-
-            h1 {
-                font-size: 12vw; /* Font gets even smaller for tiny screens */
-            }
-
-            h2 {
-                font-size: 6vw;
-            }
-
-            .back-button {
-                font-size: 5vw; /* Adjust button size */
-                padding: 18px 30px;
-            }
+        /* Styles for the buttons (fixed at bottom corners) */
+        .nav-button {
+            position: fixed;
+            bottom: 20px;  /* Position buttons 20px from the bottom */
+            width: 60px;   /* Width of the buttons */
+            height: 60px;  /* Height of the buttons */
+            background-size: cover; /* Make sure the background image covers the button */
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
         }
+
+        /* Forward button (bottom-right corner) */
+        .forward-btn {
+            right: 20px; /* Position it 20px from the right edge */
+            background-image: url('drawings/forward.png');
+        }
+
+        /* Back button (bottom-left corner) */
+        .back-btn {
+            left: 20px;  /* Position it 20px from the left edge */
+            background-image: url('drawings/backward.png');
+        }
+
+        /* Hover effect for the buttons */
+        .nav-button:hover {
+            opacity: 0.8;
+        }
+
     </style>
 </head>
 <body>
@@ -192,19 +205,31 @@
         <h2>Materials (crochet part):</h2>
     </div>
 
-    <div class="image-container">
+    <div class="image-container image1">
         <img src="drawings/yarn.png" alt="Yarn material">
         <span>4mm Worsted Yarn</span>
     </div>
 
-    <div class="image-container">
-        <img src="drawings/hook.png" alt="5mm Hook">
-        <span>5mm Hook</span>
+    <div class="image-container image2">
+        <img src="drawings/hook.png" alt="Yarn material">
+        <span>5mm hook</span>
     </div>
 
-    <div class="image-container">
-        <img src="drawings/scissors.png" alt="Scissors">
-        <span>Scissors</span>
+    <div class="image-container image3">
+        <img src="drawings/scissors.png" alt="Yarn material">
+        <span>scissors</span>
     </div>
+
+    <div class="image-container image4">
+        <img src="drawings/stuffing.png" alt="Yarn material">
+        <span>stuffing: more = dense</span>
+    </div>
+
+    <!-- Forward button linking to instructions.html -->
+    <a href="instructions.html" class="nav-button forward-btn" title="Go to Instructions"></a>
+
+    <!-- Back button linking to yellow.star.html -->
+    <a href="yellow.star.html" class="nav-button back-btn" title="Go Back to Crochet Star Keychain"></a>
+
 </body>
 </html>
