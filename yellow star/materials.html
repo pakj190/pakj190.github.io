@@ -6,10 +6,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <style>
         @font-face {
-        font-family: 'Joanna';
-        src: url('../Joanna-Regular.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
+            font-family: 'Joanna';
+            src: url('../Joanna-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
         }
 
         body {
@@ -62,9 +62,31 @@
             color: #7B5B3A;
         }
 
-        img {
-            max-width: 50%; 
-            height: auto; 
+        .image-container {
+            position: relative;
+            width: 200px; /* Adjust width of the image */
+            margin-top: 20px;
+            transition: transform 0.3s ease; /* Smooth transition for scaling */
+        }
+
+        .image-container img {
+            width: 100%; /* Make the image fill the container */
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.5); /* Scale image on hover */
+        }
+
+        .image-container:hover::after {
+            content: "4mm worsted yellow yarn"; /* Display text on hover */
+            position: absolute;
+            top: 100%; /* Position below the image */
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: "Comfortaa", sans-serif;
+            font-size: 16px;
+            color: #7B5B3A;
             margin-top: 10px;
         }
 
@@ -80,12 +102,15 @@
 
     <div>
         <h2>Materials (crochet part):</h2>
-        <p> - Any yarn 4mm or thicker but I will be using 4mm worsted yellow yarn</p>
         <p> - 5mm crochet hook (the bigger your hook, the more loose your top will be)</p>
         <p> - Scissors</p>
         <p> - Stitching needle</p>
         <p> - Stuffing</p>
         <p> - Stitch marker (you can use whatever you want for a stitch marker, it will only be used once)</p>
+    </div>
+
+    <div class="image-container">
+        <img src="drawings/yarn.png" alt="yarn material">
     </div>
 
 </body>
