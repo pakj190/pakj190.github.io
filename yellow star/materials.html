@@ -4,232 +4,56 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
-    <style>
-        @font-face {
-            font-family: 'Joanna';
-            src: url('../Joanna-Regular.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        /* Adding the background image overlay */
-        body {
-            background-image: url('linedpaper.jpeg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: top center;
-            font-family: 'Times New Roman', Times, serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            height: 100vh; /* Full height */
-            overflow-x: hidden; /* Prevent horizontal overflow */
-        }
-
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
-            z-index: -1; /* Position behind the content */
-        }
-
-        h1 {
-            font-size: 6em;
-            font-family: 'Joanna', sans-serif;
-            margin: 20px;
-            color: #7B5B3A;
-        }
-
-        h2 {
-            font-size: 20px;
-            font-family: "Comfortaa", sans-serif;
-            margin-bottom: 20px;
-        }
-
-        .back-button {
-            display: inline-block;
-            margin: 20px 0;
-            padding: 10px 20px;
-            background-color: #C2A384;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1.2em;
-            cursor: pointer;
-        }
-
-        .back-button:hover {
-            background-color: rgb(76, 51, 29);
-        }
-
-        p {
-            margin: 15px 0;
-            color: #7B5B3A;
-        }
-
-        /* Image Container */
-        .image-container {
-            position: fixed; /* Make images fixed on the page */
-            transition: transform 0.3s ease-in-out;
-            z-index: 1; /* Ensure it's above the background */
-        }
-
-        .image-container img {
-            max-width: 44%;
-            height: auto;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .image-container span {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #7B5B3A;
-            font-size: 1.2em;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .image-container:hover span {
-            opacity: 1;
-        }
-
-        .image-container:hover img {
-            transform: scale(1.5); 
-        }
-
-        .image1 {
-            top: 60%; 
-            left: 40%;
-            transform: translate(-50%, -50%);
-            max-width: 500px;
-        }
-
-        .image2 {
-            top: 48%;
-            left: 80%;
-            transform: translate(-50%, -50%);
-            max-width: 650px;
-        }
-
-        .image3 {
-            top: 57%;
-            left: 20%;
-            transform: translate(-50%, -50%);
-            max-width: 500px;
-        }
-
-        .image4{
-            top: 70%;
-            left: 65%;
-            transform: translate(-50%, -50%);
-            max-width: 660px;
-        }
-
-        /* Media Query for small screens */
-        @media (max-width: 768px) {
-            .image1, .image2, .image3, .image4 {
-                position: fixed; /* Keep images fixed even on small screens */
-                max-width: 80%;
-            }
-            h1 {
-                font-size: 4em;
-            }
-            h2 {
-                font-size: 18px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .image1, .image2, .image3, .image4 {
-                position: fixed; 
-                max-width: 40%;
-            }
-            h1 {
-                font-size: 3em;
-            }
-            h2 {
-                font-size: 16px;
-            }
-        }
-
-        /* Styles for the buttons (fixed at bottom corners) */
-        .nav-button {
-            position: fixed;
-            bottom: 20px;  /* Position buttons 20px from the bottom */
-            width: 60px;   /* Width of the buttons */
-            height: 60px;  /* Height of the buttons */
-            background-size: cover; /* Make sure the background image covers the button */
-            background-repeat: no-repeat;
-            background-position: center;
-            cursor: pointer;
-            transition: opacity 0.3s ease;
-        }
-
-        /* Forward button (bottom-right corner) */
-        .forward-btn {
-            right: 20px; /* Position it 20px from the right edge */
-            background-image: url('drawings/forward.png');
-        }
-
-        /* Back button (bottom-left corner) */
-        .back-btn {
-            left: 20px;  /* Position it 20px from the left edge */
-            background-image: url('drawings/backward.png');
-        }
-
-        /* Hover effect for the buttons */
-        .nav-button:hover {
-            opacity: 0.8;
-        }
-
-    </style>
+    <link rel="stylesheet" href="materials.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
-    <h1>Materials for Crochet Star Keychain</h1>
+    <div class="content-wrapper">
+        <h1>Materials for Crochet Star Keychain</h1>
 
-    <a href="yellow.star.html" class="back-button">Back to Crochet Star Keychain</a>
+        <a href="yellow.star.html" class="back-button">Back to Crochet Star Keychain</a>
 
-    <div>
-        <h2>Materials (crochet part):</h2>
+        <div>
+            <h2>Materials (crochet part):</h2>
+        </div>
+
+        <!-- Image Containers -->
+        <div class="image-container image1">
+            <img src="drawings/yarn.png" alt="Yarn material">
+            <span>4mm Worsted Yarn</span>
+        </div>
+
+        <div class="image-container image2">
+            <img src="drawings/hook.png" alt="hook">
+            <span>5mm hook</span>
+        </div>
+
+        <div class="image-container image3">
+            <img src="drawings/scissors.png" alt="scissors">
+            <span>scissors</span>
+        </div>
+
+        <div class="image-container image4">
+            <img src="drawings/stuffing.png" alt="stuffing">
+            <span>stuffing: more = dense</span>
+        </div>
+
+        <div class="image-container image5">
+            <img src="drawings/chain.png" alt="chain">
+            <span>any chain</span>
+        </div>
+
+        <div class="image-container image6">
+            <img src="drawings/clasp.png" alt="clasp">
+            <span>clasp</span>
+        </div>
+
+        <div class="image-container image7">
+            <img src="drawings/pliers.png" alt="pliers">
+            <span>pliers</span>
+        </div>
+
+        <a href="instructions.html" class="nav-button forward-btn" title="Go to Instructions"></a>
+        <a href="yellow.star.html" class="nav-button back-btn" title="Go Back to Crochet Star Keychain"></a>
     </div>
-
-    <div class="image-container image1">
-        <img src="drawings/yarn.png" alt="Yarn material">
-        <span>4mm Worsted Yarn</span>
-    </div>
-
-    <div class="image-container image2">
-        <img src="drawings/hook.png" alt="Yarn material">
-        <span>5mm hook</span>
-    </div>
-
-    <div class="image-container image3">
-        <img src="drawings/scissors.png" alt="Yarn material">
-        <span>scissors</span>
-    </div>
-
-    <div class="image-container image4">
-        <img src="drawings/stuffing.png" alt="Yarn material">
-        <span>stuffing: more = dense</span>
-    </div>
-
-    <!-- Forward button linking to instructions.html -->
-    <a href="instructions.html" class="nav-button forward-btn" title="Go to Instructions"></a>
-
-    <!-- Back button linking to yellow.star.html -->
-    <a href="yellow.star.html" class="nav-button back-btn" title="Go Back to Crochet Star Keychain"></a>
-
 </body>
 </html>

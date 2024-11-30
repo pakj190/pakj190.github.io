@@ -1,0 +1,206 @@
+@font-face {
+    font-family: 'Joanna';
+    src: url('../Joanna-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Adding the background image overlay */
+body {
+    background-image: url('linedpaper.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    height: 100vh; /* Full height */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    z-index: -1; /* Position behind the content */
+}
+
+h1 {
+    font-size: 6em;
+    font-family: 'Joanna', sans-serif;
+    margin: 20px;
+    color: #7B5B3A;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: "Comfortaa", sans-serif;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #C2A384;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: rgb(76, 51, 29);
+}
+
+p {
+    margin: 15px 0;
+    color: #7B5B3A;
+}
+
+/* Image Container */
+.image-container {
+    position: fixed; /* Keep images fixed on the page */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1; /* Ensure it's above the background */
+    max-width: 20vw;  /* Use viewport width for responsiveness */
+}
+
+.image-container img {
+    width: 100%; /* Make sure the image takes up the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #7B5B3A;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover span {
+    opacity: 1;
+}
+
+.image-container:hover img {
+    transform: scale(1.5); 
+}
+
+.image1 {
+    top: 50%; 
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.image2 {
+    top: 48%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.image3 {
+    top: 57%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.image4 {
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+.image5 {
+    top: 87%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.image6 {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image7 {
+    top: 88%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .image-container {
+        max-width: 50vw; /* Make images larger on smaller screens */
+    }
+    h1 {
+        font-size: 4em;
+    }
+    h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        max-width: 55vw; /* Larger images on very small screens */
+    }
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 16px;
+    }
+}
+
+.nav-button {
+    position: fixed;
+    bottom: 20px;  /* Position buttons 20px from the bottom */
+    width: 100px;   /* Width of the buttons */
+    height: 100px;  /* Height of the buttons */
+    background-size: cover; /* Make sure the background image covers the button */
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.forward-btn {
+    right: 20px; /* Position it 20px from the right edge */
+    background-image: url('drawings/forward.png');
+}
+
+.back-btn {
+    left: 20px;  /* Position it 20px from the left edge */
+    background-image: url('drawings/backward.png');
+}
+
+/* Hover effect for the buttons */
+.nav-button:hover {
+    opacity: 0.8;
+}
+
+/* Add a wrapper to center content */
+.content-wrapper {
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}

@@ -26,6 +26,16 @@
             align-items: center;
             text-align: center; 
         }
+        body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+        z-index: -1; /* Position behind the content */
+        }
 
 
         h1 {
@@ -89,7 +99,8 @@
     <h1>amigurmi keychain</h1>
     <a href="../index.html" class="back-button">back to my portfolio</a>
     <div>
-        <h2>We are making this mini mesh bag together</h2>
+        <h2>although I won't be teaching you how to crochet the star, 
+            this is to show that any small amigurumi you make can be turned into a keychain</h2>
     
         <a href="materials.html">
             <img src="yellow.star.png" alt="Entry 1" style="cursor: pointer;">
