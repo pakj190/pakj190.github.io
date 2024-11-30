@@ -13,19 +13,33 @@
         }
 
         body {
-            background-image: url('linedpaper.jpeg'); 
-            background-repeat: no-repeat; 
-            background-size: cover; 
-            background-position: top center;
-            font-family: 'Times New Roman', Times, serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+        background-image: url('linedpaper.jpeg');
+        background-repeat: repeat-y; /* Repeat the background image vertically */
+        background-size: 100% auto; /* Make the background image width 100% of the screen, and height auto */
+        background-position: top center;
+        font-family: 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative; /* Make sure ::before is positioned correctly */
         }
+
+    /* Adding a semi-transparent white overlay to lighten the background */
+        body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+        z-index: -1; /* Position behind the content */
+        }
+
 
         h1 {
             font-size: 6em;
@@ -35,9 +49,15 @@
         }
 
         h2 {
-            font-size: 20px;
+            font-size: 24px;
             font-family: "Comfortaa", sans-serif;
             margin-bottom: 20px;
+        }
+
+        p {
+            margin: 15px 0;
+            color: #7B5B3A;
+            font-size: 20px;
         }
 
         .back-button {
@@ -57,10 +77,6 @@
             background-color: rgb(76, 51, 29);
         }
 
-        p {
-            margin: 15px 0;
-            color: #7B5B3A;
-        }
 
         img {
             max-width: 50%; 
@@ -71,14 +87,45 @@
         iframe {
             margin-top: 20px;
         }
+
+        .nav-button {
+        position: fixed;
+        bottom: 20px;
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        }
+
+        .forward-btn {
+            right: 20px;
+            background-image: url('drawings/forward.png');
+        }
+
+        .back-btn {
+            left: 20px;
+            background-image: url('drawings/backward.png');
+        }
+
+        .nav-button:hover {
+            opacity: 0.8;
+        }
+
+        .content-wrapper {
+            max-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
 
-   <h1>tutorial</h1>
-    <!-- Back button linking to materials.html -->
-    <a href="materials.html" class="back-button">Back to Materials</a>
-
+   <h1>instructions</h1>
     <div>
         <h2>Watch this tutorial if you want to make a mini star plush:</h2>
         <p>I changed the design a bit to make it the way I want it to look but if you are a beginner, 
@@ -92,16 +139,33 @@
 
     <div>
         <h2>Turning your crochet piece into a keychain:</h2>
+
         <p>You will need a keychain and some chains that you want to use.</p>
-        <img src="progress/1.png" alt="Amigurumi and supplies">
-        <p>Get your amigurumi and supplies.</p>
-        <img src="progress/2.png" alt="Supplies: keychains, chains, pliers">
-        <p>My supplies are keychains, chains, and pliers.</p>
-        <img src="progress/3.png" alt="Finished keychain">
+
+        <img src="progress/twostarsides.jpg" alt="Amigurumi and supplies">
+        <p>Make sure to have two stars so you can sew it together.</p>
+
+        <img src="progress/sewing.jpg" alt="Amigurumi and supplies">
+        <p>Sew the two stars together after putting the stuffing inbetween the two sides.</p>
+
+        <img src="progress/starsewed.jpg" alt="Amigurumi and supplies">
+        <p>Now you have your plushie.</p>
+
+        <img src="progress/supplies.jpg" alt="Amigurumi and supplies">
+        <p>Grab your plushie and keychain supplies.</p>
+
+        <img src="progress/addingkeychain.jpg" alt="Amigurumi and supplies">
+        <p>Use the pliers and open the end link on your chain to loop on the top of the plush.</p>
+
+            <p> Put the loop through one of the loops on your plushie.</p>
+            <p>Think of this as if you're just attachiching the metal part.</p>
+            <p>It's a really simple process.</p>
+      
+            <p>Go to the next page to see the final images and other examples of crochet keychains.</p>
     </div>
 
-    <!-- Back button linking to crochet-star-keychain.html -->
-    <a href="materials.html" class="back-button">back to materials</a>
+    <a href="finalproduct.html" class="nav-button forward-btn" title="Go to Instructions"></a>
+    <a href="materials.html" class="nav-button back-btn" title="Go Back to Crochet Star Keychain"></a>
 
 </body>
 </html>

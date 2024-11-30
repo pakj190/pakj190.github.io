@@ -29,7 +29,7 @@ h2 {
     display: inline-block;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 14px;
+    font-size: 24px;
     margin: 20px 20px 0 0; /* Adds consistent space between elements */
 }
 
@@ -45,6 +45,7 @@ h3 {
 p {
     color: #9e846a;
     margin: 25px 0; /* Consistent margin for paragraphs */
+    font-size: 20px;
 }
 
 a {
