@@ -26,7 +26,17 @@
             align-items: center;
             text-align: center; 
         }
-
+        
+        body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        z-index: -1;
+        }
 
         h1 {
             font-size: 6em;
@@ -40,6 +50,17 @@
             font-family: "Comfortaa", sans-serif;
         }
 
+        h3 {
+            font-size: 3em;
+            margin: 20px 0;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #7B5B3A;
+            font-size: 20px;
+        }
+        
         .back-button {
             display: inline-block;
             margin: 20px 0;
@@ -57,19 +78,12 @@
             background-color: rgb(76, 51, 29);
         }
 
-        h3 {
-            font-size: 3em;
-            margin: 20px 0;
-        }
-
-        p {
-            margin: 15px 0;
-            color: #7B5B3A;
-        }
         img {
             max-width: 40%; 
             height: auto; 
-            margin-top: 20px;
+            margin-top: 5px;
+            animation: jiggle 1s infinite;
+
         }
         @keyframes jiggle {
             0%, 100% { transform: rotate(0deg); }
@@ -78,9 +92,6 @@
             75% { transform: rotate(3deg); }
         }
   
-        img {
-            animation: jiggle 1s infinite;
-        }
     </style>
 </head>
 <body>
@@ -88,18 +99,13 @@
     <a href="../index.html" class="back-button">Back to My Portfolio</a>
     <div>
         <h2>Today, we are making a short sleeve mesh top</h2>
-        <img src="crochet.mesh.shortsleeve.png" alt="Entry 5">
-        <h2>materials:</h2>
-        <p> - any yarn of your preference but I will be using a 2g cotton yarn</p>
-        <p> - 5mm crochet hook (the bigger your hook, the more loose your top will be)</p>
-        <p> - scissors</p>
-        <p> - tape measure or form of ruler (optional and only used for sizing)</p>
-        <p> - stitch marker (you can use whatever you want for a stitch marker, it will only be used once)</p>
-    </div>
-    <div>
-        <h2>sizing:</h2>
-        <p>you can make this any size you want so i will tell you how to extend the pattern to fit whatever size you desire.</p>
-        <p>I will be working with my own personal size that fits me best</p>
+        <p>click on the top to proceed into the materials page</p>
+
+
+        <a href="materials.html">
+            <img src="crochet.mesh.shortsleeve.png" alt="Entry 1" style="cursor: pointer;">
+        </a>
+
     </div>
     
 </body>
