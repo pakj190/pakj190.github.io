@@ -11,23 +11,22 @@
             font-weight: normal;
             font-style: normal;
         }
-
+    
         body {
             background-image: url('linedpaper.jpeg');
-            background-repeat: repeat-y; /* Repeat the background image vertically */
-            background-size: 100% auto; /* Make the background image width 100% of the screen, and height auto */
+            background-repeat: repeat-y;
+            background-size: 100% auto;
             background-position: top center;
             font-family: 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             text-align: center;
             position: relative;
         }
-
+    
         body::before {
             content: '';
             position: absolute;
@@ -35,29 +34,30 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
-            z-index: -1; /* Position behind the content */
+            background-color: rgba(255, 255, 255, 0.7);
+            z-index: -1;
         }
-
+    
         h1 {
-            font-size: 6em;
+            font-size: 4em;
             font-family: 'Joanna', sans-serif;
             margin: 20px;
             color: #7B5B3A;
+            padding-top: 20px;
         }
-
+    
         h2 {
             font-size: 24px;
             font-family: "Comfortaa", sans-serif;
             margin-bottom: 20px;
         }
-
+    
         p {
             margin: 15px 0;
             color: #7B5B3A;
             font-size: 20px;
         }
-
+    
         .back-button {
             display: inline-block;
             margin: 20px 0;
@@ -70,45 +70,46 @@
             font-size: 1.2em;
             cursor: pointer;
         }
-
+    
         .back-button:hover {
             background-color: rgb(76, 51, 29);
         }
-
+    
+        /* Content wrapper with larger grid for the text */
         .content-wrapper {
             display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: 80%;
+            justify-content: space-between; /* Spread out text and images */
+            align-items: flex-start;
+            width: 90%; /* Ensure content wrapper takes up most of the page */
             margin-top: 20px;
-            flex-wrap: wrap;
+            gap: 30px; /* Gap between text and image */
         }
-
+    
+        /* Text container now takes up more space */
         .text-container {
-            flex: 1;
-            margin-right: 20px;
+            flex: 2; /* Make text column wider (3x as wide as the image column) */
             text-align: left;
+            margin-right: 30px;
+            max-width: 50%; /* Limit the maximum width of the text container */
         }
-
+    
+        /* Image container - right-aligned */
         .image-container {
-            flex: 1;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: center;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            gap: 20px; /* Space between images */
+            max-width: 50%; /* Limit width to 50% of the content wrapper */
         }
-
-        img {
-            max-width: 30%;
+    
+        .image-container img {
+            width: 100%; /* Ensure images fill the grid cell */
             height: auto;
-            margin-top: 10px;
         }
-
+    
         iframe {
             margin-top: 20px;
         }
-
+    
         .nav-button {
             position: fixed;
             bottom: 20px;
@@ -120,117 +121,116 @@
             cursor: pointer;
             transition: opacity 0.3s ease;
         }
-
+    
         .forward-btn {
             right: 20px;
             background-image: url('drawings/forward.png');
         }
-
+    
         .back-btn {
             left: 20px;
             background-image: url('drawings/backward.png');
         }
-
+    
         .nav-button:hover {
             opacity: 0.8;
         }
-
     </style>
+    
 </head>
 <body>
 
-    <h1>instructions</h1>
+    <h1>Instructions</h1>
 
     <div class="content-wrapper">
         <div class="text-container">
-            <h2>Turning your crochet piece into a keychain:</h2>
-            <p>You will need a keychain and some chains that you want to use.</p>
-            <p>Make sure to have two stars so you can sew it together.</p>
-            <p>Sew the two stars together after putting the stuffing in-between the two sides.</p>
-            <p>Now you have your plushie.</p>
-            <p>Grab your plushie and keychain supplies.</p>
-            <p>Use the pliers and open the end link on your chain to loop on the top of the plush.</p>
-            <p>Put the loop through one of the loops on your plushie.</p>
-            <p>Think of this as if you're just attaching the metal part.</p>
-            <p>It's a really simple process.</p>
-            <p>Go to the next page to see the final images and other examples of crochet keychains.</p>
+            <h2>Front Panel:</h2>
+            <p>Magic loop</p>
+            <p>Chain the width of your top in multiples of 3 (if you want to have a wider top, crochet more chains, if you want a tighter top, crochet less chains)</p>
+            <p>Put a stitch marker in the last chain you make</p>
+            <p>Chain 10</p>
+            <p>Double crochet into the chain with the stitch marker</p>
+            <p>Chain 2 and skip 2 chains and on the 3rd chain, double crochet</p>
+            <p>Continue to the end</p>
+            <p>Once the row is finished, chain 7</p>
+            <p>Double crochet into the corner of the square from the previous row</p>
+            <p>(skip 2 chain and double crochet into the 3rd)</p>
+            <p>Continue down the row</p>
+            <p>Repeat this until you are satisfied with the length of your top</p>
+            <p>To make the neck hole, we are going to crochet “shoulder” panels which is basically the same thing but on each end of the sides</p>
+            <p>When you get to the end of the row, chain 7</p>
+            <p>Double crochet into the 3rd stitch just like you did before in the body panel</p>
+            <p>Make about 3-4 squares (the more squares, the more narrow your neck hole will be)</p>
+            <p>Repeat until you have 3 rows (3x3 squares)</p>
+            <p>Chain 1 and tie it off</p>
+
+            <h2>Second Shoulder Panel:</h2>
+            <p>Magic loop</p>
+            <p>Count 3 squares from the opposite side</p>
+            <p>Insert hook into the 3rd square corner (9th stitch)</p>
+            <p>Chain 7</p>
+            <p>Double crochet into 3rd</p>
+            <p>Chain 2, double crochet into 3rd stitch until the end</p>
+            <p>Chain 7, double crochet into 3rd and repeat</p>
+            <p>This time make sure you have 4 rows x 3</p>
+            <p>You should have 4x3 squares just like the other side</p>
+
+            <h2>Finish the Neck Hole:</h2>
+            <p>Count all the squares that are in-between the shoulder panels</p>
+            <p>I have 10 squares</p>
+            <p>Multiply that number by 3 which means for me it is 30 and then minus 1 so 29</p>
+            <p>I have to chain 29 and you chain whatever number you got from the equation</p>
+            <p>Double crochet into the side that has 3x3 squares</p>
+            <p>Finish the row with chain 2, double crochet into the 3rd</p>
+            <p>Now you have your neck hole</p>
+
+            <h2>Back Panel:</h2>
+            <p>Chain 7, double crochet into the 3rd stitch and repeat</p>
+            <p>When you get to the chain 29, count 3 stitches and double crochet</p>
+            <p>Keep going until you have the same amount of rows as the front panel</p>
+            <p>Tie off and cut the yarn</p>
         </div>
+
+        <!-- Right side for images -->
         <div class="image-container">
-            <!-- Loop through IMG2455.JPG to IMG2527.JPG -->
-            <!-- Repeat the image tag structure for each image number -->
-            <img src="progress/IMG2455.JPG" alt="Crochet Keychain Step 1">
-            <img src="progress/IMG2456.JPG" alt="Crochet Keychain Step 2">
-            <img src="progress/IMG2457.JPG" alt="Crochet Keychain Step 3">
-            <img src="progress/IMG2458.JPG" alt="Crochet Keychain Step 4">
-            <img src="progress/IMG2459.JPG" alt="Crochet Keychain Step 5">
-            <img src="progress/IMG2460.JPG" alt="Crochet Keychain Step 6">
-            <img src="progress/IMG2461.JPG" alt="Crochet Keychain Step 7">
-            <img src="progress/IMG2462.JPG" alt="Crochet Keychain Step 8">
-            <img src="progress/IMG2463.JPG" alt="Crochet Keychain Step 9">
-            <img src="progress/IMG2464.JPG" alt="Crochet Keychain Step 10">
-            <img src="progress/IMG2465.JPG" alt="Crochet Keychain Step 11">
-            <img src="progress/IMG2466.JPG" alt="Crochet Keychain Step 12">
-            <img src="progress/IMG2467.JPG" alt="Crochet Keychain Step 13">
-            <img src="progress/IMG2468.JPG" alt="Crochet Keychain Step 14">
-            <img src="progress/IMG2469.JPG" alt="Crochet Keychain Step 15">
-            <img src="progress/IMG2470.JPG" alt="Crochet Keychain Step 16">
-            <img src="progress/IMG2471.JPG" alt="Crochet Keychain Step 17">
-            <img src="progress/IMG2472.JPG" alt="Crochet Keychain Step 18">
-            <img src="progress/IMG2473.JPG" alt="Crochet Keychain Step 19">
-            <img src="progress/IMG2474.JPG" alt="Crochet Keychain Step 20">
-            <img src="progress/IMG2475.JPG" alt="Crochet Keychain Step 21">
-            <img src="progress/IMG2476.JPG" alt="Crochet Keychain Step 22">
-            <img src="progress/IMG2477.JPG" alt="Crochet Keychain Step 23">
-            <img src="progress/IMG2478.JPG" alt="Crochet Keychain Step 24">
-            <img src="progress/IMG2479.JPG" alt="Crochet Keychain Step 25">
-            <img src="progress/IMG2480.JPG" alt="Crochet Keychain Step 26">
-            <img src="progress/IMG2481.JPG" alt="Crochet Keychain Step 27">
-            <img src="progress/IMG2482.JPG" alt="Crochet Keychain Step 28">
-            <img src="progress/IMG2483.JPG" alt="Crochet Keychain Step 29">
-            <img src="progress/IMG2484.JPG" alt="Crochet Keychain Step 30">
-            <img src="progress/IMG2485.JPG" alt="Crochet Keychain Step 31">
-            <img src="progress/IMG2486.JPG" alt="Crochet Keychain Step 32">
-            <img src="progress/IMG2487.JPG" alt="Crochet Keychain Step 33">
-            <img src="progress/IMG2488.JPG" alt="Crochet Keychain Step 34">
-            <img src="progress/IMG2489.JPG" alt="Crochet Keychain Step 35">
-            <img src="progress/IMG2490.JPG" alt="Crochet Keychain Step 36">
-            <img src="progress/IMG2491.JPG" alt="Crochet Keychain Step 37">
-            <img src="progress/IMG2492.JPG" alt="Crochet Keychain Step 38">
-            <img src="progress/IMG2493.JPG" alt="Crochet Keychain Step 39">
-            <img src="progress/IMG2494.JPG" alt="Crochet Keychain Step 40">
-            <img src="progress/IMG2495.JPG" alt="Crochet Keychain Step 41">
-            <img src="progress/IMG2496.JPG" alt="Crochet Keychain Step 42">
-            <img src="progress/IMG2497.JPG" alt="Crochet Keychain Step 43">
-            <img src="progress/IMG2498.JPG" alt="Crochet Keychain Step 44">
-            <img src="progress/IMG2499.JPG" alt="Crochet Keychain Step 45">
-            <img src="progress/IMG2500.JPG" alt="Crochet Keychain Step 46">
-            <img src="progress/IMG2501.JPG" alt="Crochet Keychain Step 47">
-            <img src="progress/IMG2502.JPG" alt="Crochet Keychain Step 48">
-            <img src="progress/IMG2503.JPG" alt="Crochet Keychain Step 49">
-            <img src="progress/IMG2504.JPG" alt="Crochet Keychain Step 50">
-            <img src="progress/IMG2505.JPG" alt="Crochet Keychain Step 51">
-            <img src="progress/IMG2506.JPG" alt="Crochet Keychain Step 52">
-            <img src="progress/IMG2507.JPG" alt="Crochet Keychain Step 53">
-            <img src="progress/IMG2508.JPG" alt="Crochet Keychain Step 54">
-            <img src="progress/IMG2509.JPG" alt="Crochet Keychain Step 55">
-            <img src="progress/IMG2510.JPG" alt="Crochet Keychain Step 56">
-            <img src="progress/IMG2511.JPG" alt="Crochet Keychain Step 57">
-            <img src="progress/IMG2512.JPG" alt="Crochet Keychain Step 58">
-            <img src="progress/IMG2513.JPG" alt="Crochet Keychain Step 59">
-            <img src="progress/IMG2514.JPG" alt="Crochet Keychain Step 60">
-            <img src="progress/IMG2515.JPG" alt="Crochet Keychain Step 61">
-            <img src="progress/IMG2516.JPG" alt="Crochet Keychain Step 62">
-            <img src="progress/IMG2517.JPG" alt="Crochet Keychain Step 63">
-            <img src="progress/IMG2518.JPG" alt="Crochet Keychain Step 64">
-            <img src="progress/IMG2519.JPG" alt="Crochet Keychain Step 65">
-            <img src="progress/IMG2520.JPG" alt="Crochet Keychain Step 66">
-            <img src="progress/IMG2521.JPG" alt="Crochet Keychain Step 67">
-            <img src="progress/IMG2522.JPG" alt="Crochet Keychain Step 68">
-            <img src="progress/IMG2523.JPG" alt="Crochet Keychain Step 69">
-            <img src="progress/IMG2524.JPG" alt="Crochet Keychain Step 70">
-            <img src="progress/IMG2525.JPG" alt="Crochet Keychain Step 71">
-            <img src="progress/IMG2526.JPG" alt="Crochet Keychain Step 72">
-            <img src="progress/IMG2527.JPG" alt="Crochet Keychain Step 73">
+            <img src="progress/IMG_2455.jpg" alt="Crochet Keychain Step 1">
+            <img src="progress/IMG_2457.jpg" alt="Crochet Keychain Step 3">
+            <img src="progress/IMG_2464.jpg" alt="Crochet Keychain Step 10">
+            <img src="progress/IMG_2466.jpg" alt="Crochet Keychain Step 12">
+            <img src="progress/IMG_2467.jpg" alt="Crochet Keychain Step 13">
+            <img src="progress/IMG_2468.jpg" alt="Crochet Keychain Step 14">
+            <img src="progress/IMG_2469.jpg" alt="Crochet Keychain Step 15">
+            <img src="progress/IMG_2470.jpg" alt="Crochet Keychain Step 16">
+            <img src="progress/IMG_2471.jpg" alt="Crochet Keychain Step 17">
+            <img src="progress/IMG_2473.jpg" alt="Crochet Keychain Step 19">
+            <img src="progress/IMG_2474.jpg" alt="Crochet Keychain Step 20">
+            <img src="progress/IMG_2475.jpg" alt="Crochet Keychain Step 21">
+            <img src="progress/IMG_2477.jpg" alt="Crochet Keychain Step 23">
+            <img src="progress/IMG_2479.jpg" alt="Crochet Keychain Step 25">
+            <img src="progress/IMG_2480.jpg" alt="Crochet Keychain Step 26">
+            <img src="progress/IMG_2481.jpg" alt="Crochet Keychain Step 27">
+            <img src="progress/IMG_2482.jpg" alt="Crochet Keychain Step 28">
+            <img src="progress/IMG_2483.jpg" alt="Crochet Keychain Step 29">
+            <img src="progress/IMG_2484.jpg" alt="Crochet Keychain Step 30">
+            <img src="progress/IMG_2485.jpg" alt="Crochet Keychain Step 31">
+            <img src="progress/IMG_2486.jpg" alt="Crochet Keychain Step 32">
+            <img src="progress/IMG_2487.jpg" alt="Crochet Keychain Step 33">
+            <img src="progress/IMG_2488.jpg" alt="Crochet Keychain Step 34">
+            <img src="progress/IMG_2489.jpg" alt="Crochet Keychain Step 35">
+            <img src="progress/IMG_2490.jpg" alt="Crochet Keychain Step 36">
+            <img src="progress/IMG_2491.jpg" alt="Crochet Keychain Step 37">
+            <img src="progress/IMG_2492.jpg" alt="Crochet Keychain Step 38">
+            <img src="progress/IMG_2493.jpg" alt="Crochet Keychain Step 39">
+            <img src="progress/IMG_2494.jpg" alt="Crochet Keychain Step 40">
+            <img src="progress/IMG_2495.jpg" alt="Crochet Keychain Step 41">
+            <img src="progress/IMG_2496.jpg" alt="Crochet Keychain Step 42">
+            <img src="progress/IMG_2497.jpg" alt="Crochet Keychain Step 43">
+            <img src="progress/IMG_2498.jpg" alt="Crochet Keychain Step 44">
+            <img src="progress/IMG_2499.jpg" alt="Crochet Keychain Step 45">
+            <img src="progress/IMG_2500.jpg" alt="Crochet Keychain Step 46">
+            <img src="progress/IMG_2501.jpg" alt="Crochet Keychain Step 47">
+            <img src="progress/IMG_2502.jpg" alt="Crochet Keychain Step 48">
+            <img src="progress/IMG_2503.jpg" alt="Crochet Keychain Step 49">
         </div>
     </div>
 
