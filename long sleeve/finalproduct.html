@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Joanna';
+            src: url('../Joanna-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-image: url('linedpaper.jpeg'); 
+            background-repeat: repeat-y;
+            background-size: 100% auto;
+            background-position: top center;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 6em;
+            font-family: 'Joanna', sans-serif;
+            margin: 20px;
+            color: #7B5B3A;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-family: "Comfortaa", sans-serif;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin: 15px 0;
+            color: #7B5B3A;
+            font-size: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #C2A384;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: rgb(76, 51, 29);
+        }
+
+        /* Re-added styles for navigation buttons */
+        .nav-button {
+            position: fixed;
+            bottom: 20px;
+            width: 80px;
+            height: 80px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-btn {
+            left: 20px;
+            background-image: url('drawings/backward.png');
+        }
+
+        .forward-btn {
+            right: 20px;
+            background-image: url('drawings/forward.png');
+        }
+
+        .nav-button:hover {
+            opacity: 0.8;
+        }
+
+        .image-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            height: 500px;
+            margin: 20px auto;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        .image-wrapper {
+            position: absolute;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            text-align: center;
+            width: 200px;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .image-wrapper .overlay-text {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            display: none;
+        }
+
+        .image-wrapper:hover img {
+            transform: scale(1.5);
+            opacity: 0.5;
+        }
+
+        .image-wrapper:hover .overlay-text {
+            display: block;
+            font-size: 20px;
+        }
+
+        img.final-product {
+            width: 300px; 
+            height: auto;  
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Final Product</h1>
+    <h2>You can make it any length, color, and size you want!</h2>
+    <a href="../index.html" class="back-button">Back to my portfolio</a>
+    <p>Here is my top:</p>
+    <img src="tops/finaltop.jpg" alt="Final Product Photo" class="final-product">
+
+    <h2>here is my random stash of tops</h2>
+    <p>all my tops are not really nicely hung in my closet. 
+        Instead, they really look like a pile of random things.</p>
+        <p>so enjoy looking at my other tops just like how they look in my room (messy and all over)</p>
+
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img src="tops/blacktop.jpg" alt="Black Top">
+            <span class="overlay-text">Black and gray long sleeve made with wool blended yarn</span>
+        </div>
+        <div class="image-wrapper">
+            <img src="tops/warmtop.jpeg" alt="Warm Top">
+            <span class="overlay-text">Ombre yellow, purple, and orange yarn made with a wool and acrylic blended yarn</span>
+        </div>
+        <div class="image-wrapper">
+            <img src="tops/whitetop.jpeg" alt="White Top">
+            <span class="overlay-text">White Top made with white worsted acrylic yarn</span>
+        </div>
+        <div class="image-wrapper">
+            <img src="tops/multi.jpg" alt="Multiple Tops">
+            <span class="overlay-text">My small collection of tops 2 years ago</span>
+        </div>
+        <div class="image-wrapper">
+            <img src="tops/black.jpg" alt="Multiple Tops">
+            <span class="overlay-text">Black top made with worsted black yarn that is acrylic</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.querySelector(".image-container");
+            const wrappers = document.querySelectorAll(".image-wrapper");
+
+            const containerWidth = container.clientWidth;
+            const containerHeight = container.clientHeight;
+
+            wrappers.forEach(wrapper => {
+                const maxTop = containerHeight - wrapper.clientHeight;
+                const maxLeft = containerWidth - wrapper.clientWidth;
+
+                const randomTop = Math.random() * maxTop;
+                const randomLeft = Math.random() * maxLeft;
+
+                wrapper.style.top = `${randomTop}px`;
+                wrapper.style.left = `${randomLeft}px`;
+            });
+        });
+    </script>
+
+    <a href="instructions.html" class="nav-button back-btn" title="Go Back to Crochet Star Keychain"></a>
+</body>
+</html>
