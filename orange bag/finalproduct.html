@@ -13,18 +13,19 @@
         }
 
         body {
-            background-image: url('linedpaper.jpeg'); 
-            background-repeat: repeat-y;
-            background-size: 100% auto;
-            background-position: top center;
-            font-family: 'Times New Roman', Times, serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+        background-image: url('linedpaper.jpeg'); 
+        background-repeat: repeat-y;
+        background-size: 100% auto;
+        background-position: top center;
+        font-family: 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative; /* Ensure the overlay is positioned correctly */
         }
 
         body::before {
@@ -37,6 +38,7 @@
         background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
         z-index: -1; /* Position behind the content */
         }
+
 
         h1 {
             font-size: 6em;
@@ -122,15 +124,20 @@
 <div>
 
     <h1>final product</h1>
-    <h2>now you can make a keychain using the same method with any other product you have</h2>
 
     <a href="../index.html" class="back-button">back to my portfolio</a>
 
-    <p>This is how my star turned out</p>
-    <img src="progress/2.png" alt="Supplies: keychains, chains, pliers">
+    <h2>using this pattern and adjusting your stitch count, you can make different sizes</h2>
 
-    <p>Here it is on my school bag</p>
-    <img src="progress/3.png" alt="Finished keychain">
+
+    <p>Here is my final bag</p>
+    <img src="progress/IMG_2842.jpg" alt="Final Product Photo">
+
+    <p>This is another bag I made but it is taller</p>
+    <img src="redbag.jpeg" alt="red bag">
+
+    <p>And I also made another square mesh bag that is wider and taller</p>
+    <img src="tanbag.jpeg" alt="tan bag">
 
     <a href="instructions.html" class="nav-button back-btn" title="Go Back to Instructions"></a>
 

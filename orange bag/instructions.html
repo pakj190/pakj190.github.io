@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Joanna';
+            src: url('../Joanna-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+        background-image: url('linedpaper.jpeg'); 
+        background-repeat: repeat-y;
+        background-size: 100% auto;
+        background-position: top center;
+        font-family: 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative; /* Ensure the overlay is positioned correctly */
+        }
+
+        body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+        z-index: -1; /* Position behind the content */
+        }
+
+
+        h1 {
+            font-size: 4em;
+            font-family: 'Joanna', sans-serif;
+            margin: 20px;
+            color: #7B5B3A;
+            padding-top: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-family: "Comfortaa", sans-serif;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin: 15px 0;
+            color: #7B5B3A;
+            font-size: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #C2A384;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: rgb(76, 51, 29);
+        }
+
+        /* Content wrapper with larger grid for the text */
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between; /* Spread out text and images */
+            align-items: flex-start;
+            width: 90%; /* Ensure content wrapper takes up most of the page */
+            margin-top: 20px;
+            gap: 30px; /* Gap between text and image */
+        }
+
+        /* Text container now takes up more space */
+        .text-container {
+            flex: 2; /* Make text column wider (3x as wide as the image column) */
+            text-align: left;
+            margin-right: 30px;
+            max-width: 50%; /* Limit the maximum width of the text container */
+        }
+
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            gap: 20px; /* Space between images */
+            max-width: 50%; /* Limit width to 50% of the content wrapper */
+        }
+
+        .image-container img {
+            width: 100%; /* Ensure images fill the grid cell */
+            height: auto;
+        }
+
+        iframe {
+            margin-top: 20px;
+        }
+
+        .nav-button {
+            position: fixed;
+            bottom: 20px;
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .forward-btn {
+            right: 20px;
+            background-image: url('drawings/forward.png');
+        }
+
+        .back-btn {
+            left: 20px;
+            background-image: url('drawings/backward.png');
+        }
+
+        .nav-button:hover {
+            opacity: 0.8;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Instructions</h1>
+
+    <div class="content-wrapper">
+        <div class="text-container">
+            <h2>Written pattern:</h2>
+            <p>Chain 16</p>
+            <p>Single crochet (sc) 14</p>
+            <p>3 sc in the 15th chain</p>
+            <p>14 sc the other way down the chain</p>
+            <p>2 sc in the last stitch</p>
+            <p>Slip stitch into first sc</p>
+            <p>Chain 1</p>
+            <p>Sc 15, sc 2, sc 2</p>
+            <p>Sc 15, sc 2</p>
+            <p>Slip stitch into sc</p>
+            <p>Sc 26</p>
+            <p>Slip stitch</p>
+            <p>Chain 4, double crochet (dc)</p>
+            <p>Chain 2, dc in the 3rd chain</p>
+            <p>Chain 3 and slip stitch</p>
+            <p>start again with the sqaures until you reach your desired length</p>
+            <p>finishing it off and handles</p>
+            <p>single crochet all around the top of the stitches</p>
+            
+        </div>
+
+        <div class="image-container">
+            <img src="progress/IMG_2807.jpg" alt="Crochet Keychain Step 1">
+            <img src="progress/IMG_2809.jpg" alt="Crochet Keychain Step 3">
+            <img src="progress/IMG_2810.jpg" alt="Crochet Keychain Step 4">
+            <img src="progress/IMG_2811.jpg" alt="Crochet Keychain Step 5">
+            <img src="progress/IMG_2812.jpg" alt="Crochet Keychain Step 6">
+            <img src="progress/IMG_2813.jpg" alt="Crochet Keychain Step 7">
+            <img src="progress/IMG_2814.jpg" alt="Crochet Keychain Step 8">
+            <img src="progress/IMG_2815.jpg" alt="Crochet Keychain Step 9">
+            <img src="progress/IMG_2816.jpg" alt="Crochet Keychain Step 10">
+            <img src="progress/IMG_2817.jpg" alt="Crochet Keychain Step 11">
+            <img src="progress/IMG_2818.jpg" alt="Crochet Keychain Step 12">
+            <img src="progress/IMG_2819.jpg" alt="Crochet Keychain Step 13">
+            <img src="progress/IMG_2820.jpg" alt="Crochet Keychain Step 14">
+            <img src="progress/IMG_2821.jpg" alt="Crochet Keychain Step 15">
+            <img src="progress/IMG_2822.jpg" alt="Crochet Keychain Step 16">
+            <img src="progress/IMG_2823.jpg" alt="Crochet Keychain Step 17">
+            <img src="progress/IMG_2824.jpg" alt="Crochet Keychain Step 18">
+            <img src="progress/IMG_2825.jpg" alt="Crochet Keychain Step 19">
+            <img src="progress/IMG_2826.jpg" alt="Crochet Keychain Step 20">
+            <img src="progress/IMG_2827.jpg" alt="Crochet Keychain Step 21">
+            <img src="progress/IMG_2828.jpg" alt="Crochet Keychain Step 22">
+            <img src="progress/IMG_2829.jpg" alt="Crochet Keychain Step 23">
+            <img src="progress/IMG_2830.jpg" alt="Crochet Keychain Step 24">
+            <img src="progress/IMG_2831.jpg" alt="Crochet Keychain Step 25">
+            <img src="progress/IMG_2832.jpg" alt="Crochet Keychain Step 26">
+            <img src="progress/IMG_2833.jpg" alt="Crochet Keychain Step 27">
+            <img src="progress/IMG_2834.jpg" alt="Crochet Keychain Step 28">
+            <img src="progress/IMG_2835.jpg" alt="Crochet Keychain Step 29">
+            <img src="progress/IMG_2837.jpg" alt="Crochet Keychain Step 31">
+            <img src="progress/IMG_2838.jpg" alt="Crochet Keychain Step 32">
+            <img src="progress/IMG_2839.jpg" alt="Crochet Keychain Step 33">
+            <img src="progress/IMG_2840.jpg" alt="Crochet Keychain Step 34">
+            <img src="progress/IMG_2841.jpg" alt="Crochet Keychain Step 35">
+            <img src="progress/IMG_2842.jpg" alt="Crochet Keychain Step 36">
+        </div>
+    </div>
+
+    <a href="finalproduct.html" class="nav-button forward-btn" title="Go to Instructions"></a>
+    <a href="materials.html" class="nav-button back-btn" title="Go Back to Crochet Star Keychain"></a>
+
+</body>
+</html>

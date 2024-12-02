@@ -13,19 +13,21 @@
         }
 
         body {
-            background-image: url('linedpaper.jpeg'); 
-            background-repeat: no-repeat; 
-            background-size: cover; 
-            background-position: top center;
-            font-family: 'Times New Roman', Times, serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center; 
+        background-image: url('linedpaper.jpeg'); 
+        background-repeat: repeat-y;
+        background-size: 100% auto;
+        background-position: top center;
+        font-family: 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative; /* Ensure the overlay is positioned correctly */
         }
+
         body::before {
         content: '';
         position: absolute;
@@ -33,8 +35,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.7);
-        z-index: -1;
+        background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+        z-index: -1; /* Position behind the content */
         }
 
         h1 {
