@@ -127,6 +127,44 @@
             text-align: center;
         }
 
+
+        .container {
+            display: flex;            /* Arrange columns horizontally */
+            gap: 30px;                /* Add space between columns */
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .column {
+            flex: 1;                  /* Each column takes equal space */
+            display: flex;
+            flex-direction: column;   /* Arrange items vertically */
+            align-items: center;      /* Center items horizontally */
+        }
+
+        .column img {
+            width: 100%;              /* Ensure images take the column width */
+            max-width: 250px;         /* Set a max width for images */
+            margin-bottom: 20px;      /* Add space between images */
+            border-radius: 10px;      /* Optional: rounded corners for images */
+        }
+
+        .column p {
+            font-size: 1.5em;
+            color: #7B5B3A;
+            text-align: center;
+            margin: 10px 0;          /* Space between words */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack columns vertically on smaller screens */
+            }
+
+            .column {
+                width: 100%;           /* Each column takes full width */
+            }
+        }
     </style>
 </head>
 <body>
@@ -134,28 +172,44 @@
    <h1>instructions</h1>
 
     <div>
-        <h2>Turn your short sleeve into long sleeve:</h2>
+        <h2>Stitching the squares together:</h2>
 
-        <p>Click on the short sleeve to make the base if you need help</p>
-        <a href="../short sleeve/instructions.html" class="back-button">how to make basic short sleeve top</a>
+        <div class="container">
+            <!-- Column 1: PNG Images -->
+            <div class="column png-images">
+                <img src="steps/1.png" alt="Image 1">
+                <img src="steps/2.png" alt="Image 2">
+                <img src="steps/3.png" alt="Image 3">
+                <img src="steps/4.png" alt="Image 4">
+                <img src="steps/5.png" alt="Image 5">
+                <img src="steps/6.png" alt="Image 6">
+            </div>
 
-        <h2>
-            This is how to make the panels
-            <img src="process/postit.png" alt="Post-it Note">
-        </h2>
-        <p>Again, please reference the short sleeve top instruction if you have trouble conceptualizing these instructions</p>
+                <!-- Column 3: Words -->
+            <div class="column words">
+                <p>gather your squares</p>
+                <p>It is going to be 2 rows and as many columns as you would like.</p>
+                <p>We are going to make 3 panels: Row 1 Panel, Row 2 Panel and Hat panel</p>
+                <p>First make a long granny square train by sewing the red areas</p>
+                <p>Make sure to make 2 of those</p>
+                <p>Then sew the two together</p>
+                <p>The hat is going to be sewed on seperately</p>
+                <img src="drawings/postit4.png">
+            </div>
 
-        <img src="process/panels.png" alt="all the panels needed">
-        <p>there needs to be a front and back panel</p>
-        <p>You can have the panels as one large panel that is connected at the shoulder.</p>
-        <p>Or you can have two seperate front and back panels. It is up to you to decide.</p>
-
-        <img src="process/map.png" alt="how to peice it together">
-        <p>This is how you are going to sew the panels.</p>
-
-        <img src="process/sewing.png" alt="where to sew">
-        <p>Use the light area to sew your peices together to create the sleeves.</p>
-        <p>You are sewing the sleeve panels to the body panel.</p>
+            <!-- Column 2: JPEG Images -->
+            <div class="column jpeg-images">
+                <img src="images/IMG_0728.JPG" alt="Photo 28">
+                <img src="images/IMG_0729.JPG" alt="Photo 29">
+                <img src="images/IMG_0730.JPG" alt="Photo 30">
+                <img src="images/IMG_0731.JPG" alt="Photo 31">
+                <img src="images/IMG_0732.JPG" alt="Photo 32">
+                <img src="images/IMG_0733.JPG" alt="Photo 33">
+                <img src="images/IMG_0734.JPG" alt="Photo 34">
+            </div>
+    
+        </div>
+    
     </div>
 
     <a href="finalproduct.html" class="nav-button forward-btn" title="Go to Instructions"></a>

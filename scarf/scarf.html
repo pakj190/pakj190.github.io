@@ -26,7 +26,7 @@
             align-items: center;
             text-align: center; 
         }
-        
+
         body::before {
         content: '';
         position: absolute;
@@ -106,7 +106,7 @@
         .icon-large {
             width: 120px; 
             top: 240px; 
-            left: 30%;
+            left: 20%;
         }
 
         .icon-extra-small {
@@ -134,16 +134,18 @@
             margin-top: 100px; 
         }
 
-        .clickhere {
-            width: 120px;
-            height: 120px; 
-            margin-left: 10px; 
-        }
 
         .square {
             width: 300px; 
             height: 300px; 
         }
+
+        @media (max-width: 768px) {  /* Adjust the breakpoint as needed */
+            .small-icon {
+                display: none;   /* Hide all icons with the class 'small-icon' */
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -158,12 +160,12 @@
 
     <div>
         <h2>I will show you how to assemble granny squares to make a scarf</h2>
+        <p>Click on the square to get a granny square tutorial</p>
 
         <div class="image-container">
             <a href="materials.html">
                 <img src="png drawings/square.png" alt="Entry 5" class="jiggle square">
             </a>
-            <img src="png drawings/clickhere.png" alt="Click Here" class="clickhere">
         </div>
     </div>
 
