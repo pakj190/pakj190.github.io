@@ -91,6 +91,28 @@
             opacity: 1;
         }
 
+
+        .nav-button {
+            position: fixed;
+            bottom: 20px;
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-btn {
+            left: 20px;
+            background-image: url('drawings/backward.png');
+        }
+
+        .nav-button:hover {
+            opacity: 0.8;
+        }
+        
         /* Random spinning directions */
         @keyframes spin {
             0% {
