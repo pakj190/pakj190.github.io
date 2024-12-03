@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Joanna';
+            src: url('../Joanna-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-image: url('linedpaper.jpeg'); 
+            background-repeat: repeat-y;
+            background-size: 100% auto;
+            background-position: top center;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: 6em;
+            font-family: 'Joanna', sans-serif;
+            margin: 20px;
+            color: #7B5B3A;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-family: "Comfortaa", sans-serif;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin: 15px 0;
+            color: #7B5B3A;
+            font-size: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #C2A384;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: rgb(76, 51, 29);
+        }
+
+        /* Navigation Buttons */
+        .nav-button {
+            position: fixed;
+            bottom: 20px;
+            width: 80px;
+            height: 80px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-btn {
+            left: 20px;
+            background-image: url('drawings/backward.png');
+        }
+
+        .forward-btn {
+            right: 20px;
+            background-image: url('drawings/forward.png');
+        }
+
+        .nav-button:hover {
+            opacity: 0.8;
+        }
+
+        /* Container to hold the images in the desired layout */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px; /* Add space between the columns */
+        }
+
+        .left-column, .right-column {
+            display: flex;
+            flex-direction: column; /* Stack images vertically */
+            gap: 20px; /* Space between the images */
+        }
+
+        .final-product {
+            width: 300px; 
+            height: auto;  
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Final Product</h1>
+    <h2>You can make it any length, color, and size you want!</h2>
+    <a href="../index.html" class="back-button">Back to my portfolio</a>
+    <p>Here is my top:</p>
+
+    <div class="image-container">
+        <!-- Left Column (Images 1 and 2 stacked) -->
+        <div class="left-column">
+            <img src="process/IMG_4608.JPG" alt="Final Product Photo" class="final-product">
+            <img src="process/IMG_4609.JPG" alt="Final Product Photo" class="final-product">
+            <p>my final top after working on it for like two weeks</p>
+        </div>
+
+        <!-- Right Column (Images 3 and 4 next to each other) -->
+        <div class="right-column">
+            <img src="process/IMG_4658.JPG" alt="Final Product Photo" class="final-product">
+            <img src="process/IMG_4664.JPG" alt="Final Product Photo" class="final-product">
+        </div>
+    </div>
+
+    <a href="instructions.html" class="nav-button back-btn" title="Go Back to Crochet Star Keychain"></a>
+</body>
+</html>
