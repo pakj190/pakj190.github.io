@@ -26,7 +26,7 @@
         align-items: center;
         text-align: center;
         position: relative;
-        min-height: 100vh; /* Full viewport height */
+        min-height: 100vh;
     }
     
     body::before {
@@ -36,8 +36,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
-        z-index: -1; /* Position behind the content */
+        background-color: rgba(255, 255, 255, 0.7);
+        z-index: -1;
     }
 
     h1 {
@@ -58,14 +58,13 @@
         margin-bottom: 20px;
     }
     
-    /* Centering and arranging images in a 2x2 grid */
     .image-wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 30px; /* Space between images */
+        grid-gap: 30px;
         justify-content: center;
         align-items: center;
-        margin: 30px auto; /* Center the grid horizontally */
+        margin: 30px auto;
         max-width: 60vw;
     }
     
@@ -82,6 +81,7 @@
         width: auto;
         height: auto;
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        animation: spin 2s linear infinite;
     }
     
     .image-container span {
@@ -96,12 +96,13 @@
     }
     
     .image-container:hover img {
-        transform: scale(1.8); /* Expand without restriction */
-        opacity: 0.3; /* Reduce opacity */
+        animation-play-state: paused;
+        transform: scale(1.8);
+        opacity: 0.3;
     }
 
     .image-container:hover span {
-        opacity: 1; /* Show text on hover */
+        opacity: 1;
     }
 
     .content-wrapper {
@@ -125,48 +126,26 @@
 
     .forward-btn {
         right: 20px;
-        background-image: url('drawings/forward.png'); /* Make sure the path is correct */
+        background-image: url('drawings/forward.png');
     }
 
     .back-btn {
         left: 20px;
-        background-image: url('drawings/backward.png'); /* Make sure the path is correct */
+        background-image: url('drawings/backward.png');
     }
 
     .nav-button:hover {
         opacity: 0.8;
     }
 
-    .content-wrapper {
-        max-width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-        text-align: center;
-    }
-
     @keyframes spin {
-    from {
-        transform: rotate(0deg);
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
     }
-    to {
-        transform: rotate(360deg);
-    }
-    }
-
-    .image-container img {
-        width: 100%;
-        height: auto;
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        animation: spin 2s linear infinite;  /* Continuous spin */
-    }
-
-    /* Pause spinning on hover */
-    .image-container:hover img {
-        animation-play-state: paused;  /* Stop the spinning */
-        transform: scale(1.8);  /* Zoom effect from your existing code */
-        opacity: 0.3;  /* Keep the existing hover effect */
-    }
-
     </style>    
 </head>
 <body>
