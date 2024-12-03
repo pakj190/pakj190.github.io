@@ -1,12 +1,12 @@
 const cardsArray = [
-    { name: 'apple', img: 'icons/apple.png' },
-    { name: 'banana', img: 'icons/banana.png' },
-    { name: 'blackberry', img: 'icons/blackberry.png' },
-    { name: 'pear', img: 'icons/pear.png' },
-    { name: 'watermelon', img: 'icons/watermelon.png' },
-    { name: 'strawberry', img: 'icons/strawberry.png' },
-    { name: 'lime', img: 'icons/lime.png' },
-    { name: 'blueberry', img: 'icons/blueberry.png' },
+    { name: 'apple', img: 'mess/icons/apple.png' },
+    { name: 'banana', img: 'mess/icons/banana.png' },
+    { name: 'blackberry', img: 'mess/icons/blackberry.png' },
+    { name: 'pear', img: 'mess/icons/pear.png' },
+    { name: 'watermelon', img: 'mess/icons/watermelon.png' },
+    { name: 'strawberry', img: 'mess/icons/strawberry.png' },
+    { name: 'lime', img: 'mess/icons/lime.png' },
+    { name: 'blueberry', img: 'mess/icons/blueberry.png' },
 ];
 
 const delay = 1200;
