@@ -71,7 +71,7 @@
     
     .image-container {
         position: relative;
-        overflow: hidden;
+        overflow: visible;
         transition: transform 0.3s ease-in-out;
         display: flex;
         justify-content: center;
@@ -79,7 +79,7 @@
     }
     
     .image-container img {
-        width: 100%;
+        width: auto;
         height: auto;
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
@@ -142,6 +142,29 @@
         padding: 20px;
         box-sizing: border-box;
         text-align: center;
+    }
+
+    @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        animation: spin 2s linear infinite;  /* Continuous spin */
+    }
+
+    /* Pause spinning on hover */
+    .image-container:hover img {
+        animation-play-state: paused;  /* Stop the spinning */
+        transform: scale(1.8);  /* Zoom effect from your existing code */
+        opacity: 0.3;  /* Keep the existing hover effect */
     }
 
     </style>    
