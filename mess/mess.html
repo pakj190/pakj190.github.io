@@ -28,16 +28,16 @@
             text-align: center;
             position: relative;
             min-height: 100vh;
-            transition: background-color 3.3s ease-in-out, background-image 2s ease-in-out; /* Smooth transition */
+            transition: background-color 3.3s ease-in-out, background-image 2s ease-in-out;
         }
 
         body.black-bg {
-            background-color: black;  /* Transition to black */
-            background-image: none;   /* Remove lined paper when background turns black */
+            background-color: black;
+            background-image: none;
         }
 
         h1, h2, p, .image-container span {
-            color: white;  /* Ensure text is visible on black background */
+            color: white;
         }
 
         .image-wrapper {
@@ -62,12 +62,12 @@
         .image-container img {
             max-width: 100%;   
             height: auto;      
-            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Hover transition */
-            animation: spin 2s linear infinite paused;  /* Initially paused spin */
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            animation: spin 2s linear infinite paused;
         }
 
         .image-container img.spin-start {
-            animation-play-state: running;  /* Start spinning */
+            animation-play-state: running;
         }
 
         .image-container span {
@@ -91,7 +91,6 @@
             opacity: 1;
         }
 
-
         .nav-button {
             position: fixed;
             bottom: 20px;
@@ -113,7 +112,6 @@
             opacity: 0.8;
         }
         
-        /* Random spinning directions */
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
@@ -177,23 +175,19 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Change background to black with a fade effect after 1 second
             setTimeout(() => {
                 document.body.classList.add('black-bg');
 
-                // Delay start of spinning images until background is black
                 setTimeout(() => {
                     const images = document.querySelectorAll('.image-container img');
                     images.forEach((img, index) => {
-                        // Apply random spin direction for each image
-                        const randomDelay = Math.random() * 2 + 1; // Random delay between 1 and 3 seconds
+                        const randomDelay = Math.random() * 2 + 1;
                         img.style.animationDuration = `${randomDelay}s`;
                         img.classList.add('spin-start');
                     });
-                }, 1000);  // Adjust if necessary
-            }, 1000); // Delay before fading to black
+                }, 1000);
+            }, 1000);
         });
     </script>
 </body>
 </html>
-

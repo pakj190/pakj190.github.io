@@ -6,10 +6,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <style>
         @font-face {
-        font-family: 'Joanna';
-        src: url('../Joanna-Regular.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
+            font-family: 'Joanna';
+            src: url('../Joanna-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
         }
 
         body {
@@ -34,8 +34,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
-            z-index: -1; /* Position behind the content */
+            background-color: rgba(255, 255, 255, 0.7);
+            z-index: -1;
         }
 
         h1 {
@@ -80,14 +80,12 @@
             background-color: rgb(76, 51, 29);
         }
 
-        /* Default image size */
         img {
-            max-width: 60%; /* Make the image larger */
+            max-width: 60%;
             height: auto; 
             margin-top: -10px;
         }
 
-        /* Animation */
         @keyframes jiggle {
             0%, 100% { transform: rotate(0deg); }
             25% { transform: rotate(3deg); }
@@ -99,37 +97,32 @@
             animation: jiggle 1s infinite;
         }
 
-        /* Image container style */
         .image-container {
             margin-top: -10px;
-            width: 70%; /* Make the container wider */
+            width: 70%;
         }
 
-        /* Media query for smaller screens */
         @media (max-width: 768px) {
             img {
-                max-width: 90%; /* Make the image take up more space on smaller screens */
+                max-width: 90%;
             }
         }
 
         @media (max-width: 480px) {
             img {
-                max-width: 100%; /* Make the image full width on very small screens */
+                max-width: 100%;
             }
         }
-
     </style>
 </head>
 <body>
     <h1>classic ribbed beanie</h1>
     <a href="../index.html" class="back-button">back to my portfolio</a>
     <div>
-            <h2>Press the star to look at the materials and instruction to create your own beanies</h2>
+        <h2>Press the star to look at the materials and instruction to create your own beanies</h2>
         <a href="instructions.html">
             <img src="beanie.png" alt="Entry 1" class="image-container">
         </a>
-    
     </div>
-    
 </body>
 </html>

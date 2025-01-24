@@ -6,39 +6,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <style>
         @font-face {
-        font-family: 'Joanna';
-        src: url('../Joanna-Regular.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
+            font-family: 'Joanna';
+            src: url('../Joanna-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
         }
 
         body {
-        background-image: url('linedpaper.jpeg');
-        background-repeat: repeat-y; /* Repeat the background image vertically */
-        background-size: 100% auto; /* Make the background image width 100% of the screen, and height auto */
-        background-position: top center;
-        font-family: 'Times New Roman', Times, serif;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        position: relative; /* Make sure ::before is positioned correctly */
+            background-image: url('linedpaper.jpeg');
+            background-repeat: repeat-y;
+            background-size: 100% auto;
+            background-position: top center;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
         }
 
         body::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
-        z-index: -1; /* Position behind the content */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            z-index: -1;
         }
-
 
         h1 {
             font-size: 6em;
@@ -76,9 +75,8 @@
             background-color: rgb(76, 51, 29);
         }
 
-        /* Modified to make images smaller */
         img {
-            max-width: 40%; /* Adjusted to 40% */
+            max-width: 40%;
             height: auto; 
             margin-top: 10px;
         }
@@ -87,7 +85,6 @@
             margin-top: 20px;
         }
 
-        /* Layout for the beanie containers */
         .beanie-container {
             display: flex;
             flex-direction: row;
@@ -97,19 +94,18 @@
         }
 
         .beanie-container img {
-            max-width: 40%; /* Images will now be 40% of their container width */
+            max-width: 40%;
             margin: 10px;
         }
 
         .beanie-left {
-            flex-direction: row-reverse; /* Images on the left side */
+            flex-direction: row-reverse;
         }
 
         .beanie-right {
-            flex-direction: row; /* Images on the right side */
+            flex-direction: row;
         }
 
-        /* Styles for the navigation buttons */
         .nav-button {
             position: fixed;
             bottom: 20px;
@@ -149,7 +145,6 @@
     <h1>variety</h1>
 
     <a href="../index.html" class="back-button">back to my portfolio</a>
-
 
     <h2>check out all the beanies I have made over the years</h2>
 
